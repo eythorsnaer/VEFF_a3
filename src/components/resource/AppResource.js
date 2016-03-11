@@ -42,6 +42,7 @@ function AppResource() {
 		createSeller(3, "Sælgætisgerð Sjonna og Súsí", "Matvörur", "http://i.imgur.com/IuL474x.jpg"),
 		createSeller(4, "Leirkeraverkstæði Lomma", "Keramik", "https://upload.wikimedia.org/wikipedia/commons/6/67/Potter_at_work,_Jaura,_India.jpg")
 	];
+	var nextID = 5;
 
 	var mockProducts = [
 		createProduct(1,  1, "Ullarvettlingar",  1899, 500, 12, "http://i.imgur.com/MZOmRnH.jpg"),
@@ -106,11 +107,13 @@ function AppResource() {
 		// defined above. A proper implementation will talk to
 		// an API to load/save data.
 		getSellers: function getSellers() {
+
 			return mockHttpPromise(mockResource.successLoadSellers, mockSellers);
 		},
 
 		addSeller: function addSeller(seller) {
 			if (mockResource.successAddSeller) {
+				seller.id = nextID++;
 				mockSellers.push(seller);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
