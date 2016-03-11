@@ -1,0 +1,9 @@
+node_modules/
+.tmp
+.build/
+bower_components/
+src/bower_components/
+src/components/bower_components/
+src/test/bower_components/
+.DS_Store
+*~
