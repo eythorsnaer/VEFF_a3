@@ -172,10 +172,20 @@ function AppResource() {
 			}
 
 			return mockHttpPromise(success, product);
-		}
+		},
 
-		// TODO: the updateProduct() function is left as an exercise to
-		// the reader...
+		updateSellerProduct: function(id, product) {
+			var success = false;
+			if (mockResource.successUpdateSellerProduct) {
+				var current = _.find(mockSellers, function(o){ return o.id === id;});
+				if (current !== null) {
+					success = true;
+					current.product = product;
+				}
+			}
+			
+			return mockHttpPromise(mockResource.successUpdateSellerProduct, product);		
+		}
 	};
 
 	return mockResource;
