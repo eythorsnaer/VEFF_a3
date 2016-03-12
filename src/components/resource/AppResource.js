@@ -178,13 +178,14 @@ function AppResource() {
 		updateSellerProduct: function updateSellerProduct(id, product) {
 			var success = false;
 			if (mockResource.successUpdateSellerProduct) {
-				var current = _.find(mockSellers, function(o){ return o.id === id;});
+				var current = _.find(mockProducts, function(o){ return o.id === id;});
 				if (current !== null) {
-					current.productName  	= product.name;
-					current.price  		 	= product.price;
-					current.quantitySold 	= product.quantitySold;
-					current.quantityInStock = product.quantityInStock;
-					current.path 			= product.imagePath;
+					console.log(current);
+					current.product.productName  	= product.name;
+					current.product.price  		 	= product.price;
+					current.product.quantitySold 	= product.quantitySold;
+					current.product.quantityInStock = product.quantityInStock;
+					current.product.path 			= product.imagePath;
 					success = true;
 				}
 			}
