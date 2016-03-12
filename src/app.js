@@ -8,6 +8,9 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 	}).when("/sellers/:id", {
 		controller: "SellerDetailsController",
 		templateUrl: "components/seller-details/seller-details.html"
+	}).when("/sellers/:id/topTen", {
+		controller: "SellerDetailsController",
+		templateUrl: "components/seller-details/seller-details-topTen.html"
 	})
 	. otherwise({
 		templateUrl: "components/sellers/index.html"

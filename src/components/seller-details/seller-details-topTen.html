@@ -3,13 +3,6 @@
 </div>
 
 <div ng-hide="isLoading">
-	<div >
-		<button class="btn btn-primary" ng-click="onAddProduct()">
-			<i class="fa fa-plus"/>
-			<span translate="shared.Add"></span>
-		</button>
-	</div>
-
 	<div>
 		<a href="#/"><span translate="shared.Back"></span></a>
 	</div>
@@ -19,9 +12,9 @@
 </div>
 
 <ul class="nav nav-tabs">
-  <li class="active"><a href="/#/sellers/{{sellerID}}">All products</a></li>
-  <li><a href="/#/sellers/{{sellerID}}/topTen">Top ten</a></li>
+  <li><a href="/#/sellers/{{sellerID}}">All products</a></li>
+  <li class="active"><a href="/#/sellers/{{sellerID}}/topTen">Top ten</a></li>
 </ul>
 
-<product-card ng-repeat="p in products" ng-model="p">
+<product-card ng-repeat="p in topTen" ng-model="p">
 </product-card>

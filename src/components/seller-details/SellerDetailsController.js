@@ -6,6 +6,8 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 	$scope.isLoading = true;
 	$scope.isProductDlgOpen = true;
 	$scope.products = [];
+	$scope.topTen = [];
+	var product;
 
 	if ($routeParams.id == null){
 		$location.path("");
@@ -22,8 +24,6 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 
 	AppResource.getSellerProducts(sellerID).success(function(sellerProducts){
 		$scope.products = sellerProducts;
-		console.log('id: ', sellerID);
-		console.log($scope.products);
 	});	
 
 	AppResource.getSellerDetails(sellerID).success(function(seller) {
@@ -69,5 +69,32 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 			$scope.isProductDlgOpen = false;
 		});
 	};
+
+	function exists(id, array){
+		for (var i = 0; i < array.length; i++){
+			if (array[i].id === id)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	for (var i = 0; $scope.topTen.length < 10 && i < $scope.products.length; i++){
+		
+		product = $scope.products[i];
+
+		if (!exists(product.id, $scope.topTen)){
+			for (var j = 0; j < $scope.products.length; j++){
+		
+				if (product.quantitySold < $scope.products[j].quantitySold && !exists($scope.products[j].id, $scope.topTen)){
+					product = $scope.products[j];
+				}
+			}
+
+			$scope.topTen.push(product);
+		}
+	}
 
 });
