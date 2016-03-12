@@ -3,7 +3,7 @@
 angular.module("project3App").directive('productCard', function productCard(){
 	return {
 		restrict: "E",
-		templateUrl: "src/components/product-directive/Product.html",
+		templateUrl: "src/components/seller-details/seller-details.html",
 		scope: {
 			product: "=ngModel"
 		}

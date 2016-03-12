@@ -10,3 +10,15 @@
 	<h2>{{seller.name}}</h2>
 	<p>{{seller.category}}</p>
 </div>
+
+<div ng-repeat="p in products" ng-model="p">
+	<img ng-src="{{product.imagePath}}"/>
+	<p> 
+		<span> {{product.name}} </span>
+		<span> {{product.price}}</span>
+	</p>
+	<p> 
+		<span>{{product.quantitySold}}</span>
+		<span>{{product.quantityInStock}}</span>
+	</p>
+</div>
