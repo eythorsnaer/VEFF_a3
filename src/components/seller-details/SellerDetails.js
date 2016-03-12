@@ -15,6 +15,7 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 	}
 
 	var sellerID = parseInt($routeParams.id);
+	$scope.sellerID = sellerID;
 	$scope.seller = {
 		name: 		"",
 		category: 	"",
