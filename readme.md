@@ -3,9 +3,9 @@ Assignment 3 baby!!!
 #Grading:
 The project should be unit tested, code coverage determines the grade for that part.
 
-* (5%) List individuals
-* (10%) Add/edit individuals
-* (10%) Show details about a given individual
+* X (5%) List individuals - Eyþór
+* X (10%) Add/edit individuals -Eyþór
+* (10%) Show details about a given individual -Eyþór
 * (10%) All products tab
 * (5%) Top 10 products tab
 * (10%) Add/edit product
