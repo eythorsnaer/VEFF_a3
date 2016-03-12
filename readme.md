@@ -3,20 +3,20 @@ Assignment 3 baby!!!
 #Grading:
 The project should be unit tested, code coverage determines the grade for that part.
 
-* ✓ Eyþór - (5%) List individuals
-* ✓ Eyþór - (10%) Add/edit individuals
-* Eyþór - (10%) Show details about a given individual
-* (10%) All products tab
-* (5%) Top 10 products tab
-* (10%) Add/edit product
-* (5%) All tables sortable
-* (5%) All input validated
-* (5%) Translated
-* (5%) Toastr feedback after add/edit
-* (5%) Responsive layout
-* (5%) Product directive
-* (20%) Unit tests for all code
-* (10%) Coolness bon
+* ✓ Eyþór ---(5%) List individuals
+* ✓ Eyþór ---(10%) Add/edit individuals
+* ✓ Eyþór ---(10%) Show details about a given individual
+* Bjartur ---(10%) All products tab
+* -----------(5%) Top 10 products tab
+* Bjartur ---(10%) Add/edit product
+* Eyþór -----(5%) All tables sortable
+* -----------(5%) All input validated
+* -----------(5%) Translated
+* -----------(5%) Toastr feedback after add/edit
+* -----------(5%) Responsive layout
+* -----------(5%) Product directive
+* -----------(20%) Unit tests for all code
+* -----------(10%) Coolness bon
 
 #Screens:
 * The main screen, which displays a list of all sellers which are selling their products on the site

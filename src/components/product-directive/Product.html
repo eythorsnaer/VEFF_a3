@@ -1,11 +1,11 @@
-<product-card ng-repeat="p in products" ng-model="p">
+<div ng-repeat="p in products" ng-model="p">
 	<img ng-src="{{product.imagePath}}"/>
 	<p> 
-		<span ng-model="product.name"/>
-		<span ng-model="product.price"/>
+		<span> {{product.name}} </span>
+		<span> {{product.price}}</span>
 	</p>
 	<p> 
-		<span ng-model="product.quantitySold"/>
-		<span ng-model="product.quantityInStock"/>
+		<span>{{product.quantitySold}}</span>
+		<span>{{product.quantityInStock}}</span>
 	</p>
-</product-card> 
+</div>
