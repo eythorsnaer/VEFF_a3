@@ -2,6 +2,6 @@
 	"shared" : {
 		"IS":						 "Íslenska",
 		"EN":						 "Enska",
-		"Back":						 "Til baka"
+		"LoadingMessage":			 "Sæki gögn .... Dúdúddúdú dú :p"
 	}
 }
