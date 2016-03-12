@@ -9,7 +9,6 @@ angular.module("project3App").directive('productCard', function productCard(){
 		},
 		link: function(scope, element, attributes){
 			var condition = attributes["validate-condition"];
-			console.log(scope.product);
 		}
 	};
 });
