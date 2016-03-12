@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 
 angular.module("project3App").directive('productCard', function productCard(){
 	return {
@@ -8,4 +8,4 @@ angular.module("project3App").directive('productCard', function productCard(){
 			product: "=ngModel"
 		}
 	};
-});
+});*/

@@ -31,7 +31,12 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 	}).error(function() {
 		$scope.isLoading = false;
 	});
-
-
-
+}).directive('productCard', function(){
+	return {
+		restrict: "E",
+		templateUrl: "src/components/seller-details/seller-details.html",
+		scope: {
+			product: "=ngModel"
+		}
+	};
 });

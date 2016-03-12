@@ -1,6 +1,6 @@
 <p> {{text}} </p>
 
-<product-card ng-repeat="p in products" ng-model="p">
+<div product-card ng-repeat="p in products" ng-model="p">
 	<img ng-src="{{product.imagePath}}"/>
 	<p> 
 		<span ng-model="product.name"/>
@@ -10,4 +10,4 @@
 		<span ng-model="product.quantitySold"/>
 		<span ng-model="product.quantityInStock"/>
 	</p>
-</product-card> 
+</div> 

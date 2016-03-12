@@ -11,14 +11,13 @@
 	<p>{{seller.category}}</p>
 </div>
 
-<div ng-repeat="p in products" ng-model="p">
-	<img ng-src="{{product.imagePath}}"/>
+<product-card ng-repeat="p in products" ng-model="p">
 	<p> 
-		<span> {{product.name}} </span>
+		<span> {{p.name}} </span>
 		<span> {{product.price}}</span>
 	</p>
 	<p> 
-		<span>{{product.quantitySold}}</span>
-		<span>{{product.quantityInStock}}</span>
+		<span>{{p.quantitySold}}</span>
+		<span>{{p.quantityInStock}}</span>
 	</p>
-</div>
+</product-card>
