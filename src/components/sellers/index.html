@@ -8,7 +8,7 @@
 <div ng-hide="isLoading">
 	<button class="btn btn-primary" ng-click="onAddSeller()">
 		<i class="fa fa-plus">
-		<span>Add Seller<span>
+		<span translate="sellers.AddSeller"><span>
 	</button>
 
 	<table>
@@ -16,16 +16,22 @@
 			<tr>			
 				<th>
 					<i class="fa fa-plus">
-					<span translate="sellers.Name">Seller Name<span>
+					<span translate="sellers.Name"><span>
 				</th>
-				<th translate="sellers.Category">Category</th>
-				<th>Edit</th>
+				<th translate="sellers.Category"></th>
+				<th translate="sellers.Edit"></th>
 			</tr>
 		</thead> 
 		<tbody>
 			<tr ng-repeat="s in sellers">
 				<td>{{s.name}}</td>
 				<td>{{s.category}}</td>
+				<td>
+					<button class="btn btn-default" ng-click="onEditSeller(s)">
+						<i class="fa fa-plus">
+						<span translate="sellers.Edit"><span>
+					</button>
+				</td>
 			</tr>
 		</tbody>
 

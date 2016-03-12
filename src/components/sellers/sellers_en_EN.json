@@ -3,6 +3,9 @@
 		"Title":                     "Sellers List",
 		"Name":                      "Name",
 		"Category":					 "Category",
+		"ImagePath":				 "Image Path",
+		"AddSeller":				 "Add Seller",
+		"Edit":				 		 "Edit",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",
