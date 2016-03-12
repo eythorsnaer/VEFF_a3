@@ -23,8 +23,6 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 
 	AppResource.getSellerProducts(sellerID).success(function(sellerProducts){
 		$scope.products = sellerProducts;
-		console.log('id: ', sellerID);
-		console.log($scope.products);
 	});	
 
 	AppResource.getSellerDetails(sellerID).success(function(seller) {
@@ -60,5 +58,4 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 			$scope.topTen.push(product);
 		}
 	}
-	console.log($scope.topTen);
 });
