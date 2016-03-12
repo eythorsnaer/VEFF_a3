@@ -16,7 +16,7 @@ function ProductDlgController($scope, centrisNotify, modalParam) {
 	} 
 	else {
 		$scope.product = {
-			name: 			 "",
+			name: 	 "",
 			price: 			 "",
 			quantitySold: 	 "",
 			quantityInStock: "", 

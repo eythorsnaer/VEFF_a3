@@ -174,21 +174,23 @@ function AppResource() {
 
 			return mockHttpPromise(success, product);
 		},
-	
-		updateProduct: function(id, product) {
-			if (mockResource.successUpdateSeller) {
-				var current = _.find(mockProducts, function(o){ return o.id === id;});
+
+		updateSellerProduct: function updateSellerProduct(id, product) {
+			var success = false;
+			if (mockResource.successUpdateSellerProduct) {
+				var current = _.find(mockSellers, function(o){ return o.id === id;});
 				if (current !== null) {
 					current.productName  	= product.name;
 					current.price  		 	= product.price;
 					current.quantitySold 	= product.quantitySold;
 					current.quantityInStock = product.quantityInStock;
 					current.path 			= product.imagePath;
+					success = true;
 				}
 			}
-			return mockHttpPromise(mockResource.successUpdateProduct, product);
-		},
 
+			return mockHttpPromise(success, product);
+		}
 	};
 
 	return mockResource;
