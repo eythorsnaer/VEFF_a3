@@ -1,7 +1,9 @@
-<div ng-model="p">
-	<img ng-src="{{product.imagePath}}" alt="product picture" width="400"/>
-	<p> 
-		<span> {{product.name}} </span>
-		<span> {{product.price}}</span>
-	</p>
+<div class="card" ng-model="p">
+	<img class="card-img-top" ng-src="{{product.imagePath}}" alt="product picture" width="400"/>
+	<div class="card-block"> 
+		<p class="card-text">
+			<span> {{product.name}} </span>
+			<span> {{product.price}}</span>
+		</p>
+	</div>
 </div>
