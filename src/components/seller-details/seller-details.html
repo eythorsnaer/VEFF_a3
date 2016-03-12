@@ -11,5 +11,12 @@
 	<p>{{seller.category}}</p>
 </div>
 
+<h2>All products</h2>
+
 <product-card ng-repeat="p in products" ng-model="p">
+</product-card>
+
+<h2>Top ten products</h2>
+
+<product-card ng-repeat="p in topTen" ng-model="p">
 </product-card>

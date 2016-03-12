@@ -4,6 +4,8 @@ angular.module("project3App").controller("SellerDetailsController",
 function SellerDetailsController($scope, AppResource, centrisNotify, $routeParams, $location) {
 	
 	$scope.products = [];
+	$scope.topTen = [];
+	var product;
 
 	$scope.isLoading = true;
 
@@ -31,4 +33,32 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 	}).error(function() {
 		$scope.isLoading = false;
 	});
+
+	function exists(id, array){
+		for (var i = 0; i < array.length; i++){
+			if (array[i].id === id)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	for (var i = 0; $scope.topTen.length < 10 && i < $scope.products.length; i++){
+		
+		product = $scope.products[i];
+
+		if (!exists(product.id, $scope.topTen)){
+			for (var j = 0; j < $scope.products.length; j++){
+		
+				if (product.quantitySold < $scope.products[j].quantitySold && !exists($scope.products[j].id, $scope.topTen)){
+					product = $scope.products[j];
+				}
+			}
+
+			$scope.topTen.push(product);
+		}
+	}
+	console.log($scope.topTen);
 });
