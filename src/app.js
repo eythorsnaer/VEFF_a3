@@ -5,7 +5,11 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 	$routeProvider.when("/", {
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
-	}). otherwise({
+	}).when("/sellers/:id", {
+		controller: "ProductController",
+		templateUrl: "components/product/index.html"
+	})
+	. otherwise({
 		templateUrl: "components/sellers/index.html"
 	});
 
