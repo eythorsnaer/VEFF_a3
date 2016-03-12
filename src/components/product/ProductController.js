@@ -16,5 +16,7 @@ function ProductController($scope, $location, AppResource, $routeParams) {
 
 	AppResource.getSellerProducts($scope.sellerID).success(function(sellerProducts){
 		$scope.products = sellerProducts;
+		console.log('id: ', $scope.sellerID);
+		console.log($scope.products);
 	});
 });
