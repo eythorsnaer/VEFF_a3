@@ -1,0 +1,12 @@
+<div ng-show="isLoading">
+	<loading-message></loading-message>
+</div>
+
+<div ng-hide="isLoading">
+	<div>
+		<a href="#/"><span translate="shared.Back"></span></a>
+	</div>
+	<img src="{{seller.imagePath}}" alt="profile picture" height="200" width="200">
+	<h2>{{seller.name}}</h2>
+	<p>{{seller.category}}</p>
+</div>

@@ -25,11 +25,9 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 			}).error(function() {
 				centrisNotify.error("sellers.Messages.SaveFailed"); //, "sellers.Fail");
 				$scope.isSellerDlgOpen = false;
-
 			});
 		}, function() {
 			$scope.isSellerDlgOpen = false;
-			console.log('modal dismissed');
 		});
 	};
 
@@ -46,7 +44,6 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 			});
 		}, function() {
 			$scope.isSellerDlgOpen = false;
-			console.log('modal dismissed');
 		});
 	};
 });

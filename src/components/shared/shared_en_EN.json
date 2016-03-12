@@ -2,6 +2,7 @@
 	"shared" : {
 		"IS":						 "Icelandic",
 		"EN":						 "English",
-		"LoadingMessage":			 "Loading Data...."
+		"LoadingMessage":			 "Loading Data....",
+		"Back":						 "Back"
 	}
 }

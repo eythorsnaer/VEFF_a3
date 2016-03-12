@@ -2,6 +2,7 @@
 	"shared" : {
 		"IS":						 "Íslenska",
 		"EN":						 "Enska",
-		"LoadingMessage":			 "Sæki gögn .... Dúdúddúdú dú :p"
+		"LoadingMessage":			 "Sæki gögn .... Dúdúddúdú dú :p",
+		"Back":						 "Farðu burt!!!"
 	}
 }

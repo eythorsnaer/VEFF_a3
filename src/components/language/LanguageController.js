@@ -2,11 +2,11 @@
 
 angular.module("project3App").controller("LanguageController",
 function LanguageController($scope, $translate) {
-	$scope.changeToIS = function changeToIS() {
+	$scope.onChangeToIS = function onChangeToIS() {
 		$translate.use("is");
 	};
 
-	$scope.changeToEN = function changeToEN() {
+	$scope.onChangeToEN = function onChangeToEN() {
 		$translate.use("en");
 	};
 });

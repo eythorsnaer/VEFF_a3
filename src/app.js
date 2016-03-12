@@ -6,12 +6,13 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
 	}).when("/sellers/:id", {
-		controller: "ProductController",
-		templateUrl: "components/product/index.html"
+		controller: "SellerDetailsController",
+		templateUrl: "components/seller-details/seller-details.html"
 	})
 	. otherwise({
 		templateUrl: "components/sellers/index.html"
 	});
+
 
 	$translateProvider.fallbackLanguage('en');
 
