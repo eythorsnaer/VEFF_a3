@@ -18,7 +18,6 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 	};
 
 	AppResource.getSellerDetails(sellerID).success(function(seller) {
-		console.log('sellerDetails: ', seller);
 		$scope.seller = seller;
 		$scope.isLoading = false;
 	}).error(function() {

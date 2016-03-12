@@ -15,7 +15,7 @@
 	
 	<table>
 		<thead>
-			<tr>
+			<tr table-sort="name">
 				<th></th>			
 				<th>
 					<i class="fa fa-plus"/>
@@ -26,7 +26,7 @@
 			</tr>
 		</thead> 
 		<tbody>
-			<tr ng-repeat="s in sellers">
+			<tr ng-repeat="s in sellers | orderBy:predicate:reverse">
 				<td>
 					<img src="{{s.imagePath}}" alt="profile picture" height="50" width="50">
 				</td>
