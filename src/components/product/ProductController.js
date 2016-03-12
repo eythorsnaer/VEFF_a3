@@ -9,12 +9,12 @@ function ProductController($scope, $location, AppResource, $routeParams) {
 		$location.path("");
 		$location.replace();
 	}
-
-	$scope.sellerID = $routeParams.id;
+	
 	$scope.text = "Products";
 	$scope.products = [];
+	var sellerID = parseInt($routeParams.id);
 
-	AppResource.getSellerProducts($scope.sellerID).success(function(sellerProducts){
+	AppResource.getSellerProducts(sellerID).success(function(sellerProducts){
 		$scope.products = sellerProducts;
 	});
 });
