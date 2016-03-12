@@ -3,12 +3,9 @@
 angular.module("project3App").directive('productCard', function productCard(){
 	return {
 		restrict: "E",
-		templateUrl: "Product.html",
+		templateUrl: "src/components/product-directive/Product.html",
 		scope: {
 			product: "=ngModel"
-		},
-		link: function(scope, element, attributes){
-			var condition = attributes["validate-condition"];
 		}
 	};
 });
