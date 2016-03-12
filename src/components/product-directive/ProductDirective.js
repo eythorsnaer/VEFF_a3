@@ -1,11 +1,11 @@
-/*"use strict";
+"use strict";
 
 angular.module("project3App").directive('productCard', function productCard(){
 	return {
 		restrict: "E",
-		templateUrl: "src/components/seller-details/seller-details.html",
+		templateUrl: "src/components/product-directive/Product.html",
 		scope: {
 			product: "=ngModel"
 		}
 	};
-});*/
+});

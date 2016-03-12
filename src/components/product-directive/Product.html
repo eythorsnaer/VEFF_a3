@@ -1,7 +1,7 @@
-<div ng-repeat="p in products" ng-model="p">
-	<img ng-src="{{product.imagePath}}"/>
+<div ng-model="p">
+	<img src="{{product.imagePath}}"/>
 	<p> 
-		<span> {{product.name}} </span>
+		<span> {{p.name}} </span>
 		<span> {{product.price}}</span>
 	</p>
 	<p> 
