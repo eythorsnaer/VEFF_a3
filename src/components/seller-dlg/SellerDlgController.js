@@ -4,7 +4,7 @@ angular.module("project3App").controller("SellerDlgController",
 function SellerDlgController($scope, centrisNotify, modalParam) {
 
 	var seller = modalParam.seller;
-	
+
 	if (seller !== undefined) {
 		$scope.seller = {
 			name: 		seller.name,
@@ -39,6 +39,6 @@ function SellerDlgController($scope, centrisNotify, modalParam) {
 	};
 
 	$scope.onCancel = function onCancel() {
-		$scope.$dismiss();
+		$scope.$dismiss('cancel');
 	};
 });

@@ -6,17 +6,19 @@
 </div>
 
 <div ng-hide="isLoading">
-	<button class="btn btn-primary" ng-click="onAddSeller()">
-		<i class="fa fa-plus">
-		<span translate="sellers.AddSeller"><span>
-	</button>
-
+	<div ng-show="!isSellerDlgOpen">
+		<button class="btn btn-primary" ng-click="onAddSeller()">
+			<i class="fa fa-plus"/>
+			<span translate="sellers.AddSeller"></span>
+		</button>
+	</div>
+	
 	<table>
 		<thead>
 			<tr>			
 				<th>
-					<i class="fa fa-plus">
-					<span translate="sellers.Name"><span>
+					<i class="fa fa-plus"/>
+					<span translate="sellers.Name"></span>
 				</th>
 				<th translate="sellers.Category"></th>
 				<th translate="sellers.Edit"></th>
@@ -27,10 +29,18 @@
 				<td>{{s.name}}</td>
 				<td>{{s.category}}</td>
 				<td>
-					<button class="btn btn-default" ng-click="onEditSeller(s)">
-						<i class="fa fa-plus">
-						<span translate="sellers.Edit"><span>
-					</button>
+					<div ng-show="!isSellerDlgOpen">
+						<button class="btn btn-default" ng-click="onEditSeller(s)">
+							<i class="fa fa-plus"/>
+							<span translate="sellers.Edit"></span>
+						</button>
+					</div>
+					<div ng-show="isSellerDlgOpen">
+						<button class="btn btn-default" >
+							<i class="fa fa-plus"/>
+							<span translate="sellers.Edit"></span>
+						</button>
+					</div>
 				</td>
 			</tr>
 		</tbody>
