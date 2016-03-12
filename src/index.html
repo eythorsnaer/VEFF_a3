@@ -15,6 +15,13 @@
 	<!-- error messages  -->
 	<toaster-container></toaster-container>
 
+	<div ng-controller="LanguageController">
+		<button ng-click="onChangeToIS()">is</button>
+		<button ng-click="onChangeToEN()">en</button>
+	</div>
+
+
+
 	<!-- inject:vendor:js -->
 	<script src="node_modules/postcss/lib/vendor.js"></script>
 	<!-- endinject -->
@@ -26,5 +33,7 @@
 	<!-- inject:templates:js -->
 	<script src="gulp/tasks/templates.js"></script>
 	<!-- endinject -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </body>
 </html>

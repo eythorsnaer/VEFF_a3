@@ -1,0 +1,13 @@
+{
+	"sellerDlg" : {
+		"Title":				     "Bæta við Seljanda",
+		"Add":						 "Bæta við",
+		"Cancel":					 "Hætta við",
+		"Messages" : {
+			"NameRequired":			 "Put the name in the box or it gets the hose again",
+			"CategoryRequired":		 "Put the Category in the box or it gets the hose again",
+			"ImagePathRequired":		 "Put the Image Path in the box or it gets the hose again"
+		}
+	}
+}
+

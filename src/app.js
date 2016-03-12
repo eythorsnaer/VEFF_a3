@@ -5,13 +5,23 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 	$routeProvider.when("/", {
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
+	}). otherwise({
+		templateUrl: "components/sellers/index.html"
 	});
-/*
+
+	$translateProvider.fallbackLanguage('en');
+
+	$translateProvider.registerAvailableLanguageKeys(['en', 'is'],{
+		'en_*':'en',
+		'is_*':'is'
+	});
+
 	$translateProvider.useStaticFilesLoader({
 		prefix: "lang_",
 		suffix: ".json"
 	});
 
+	$translateProvider.useSanitizeValueStrategy('escape');
+
 	$translateProvider.use("is");
-*/
 });

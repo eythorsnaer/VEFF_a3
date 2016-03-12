@@ -113,7 +113,8 @@ function AppResource() {
 
 		addSeller: function addSeller(seller) {
 			if (mockResource.successAddSeller) {
-				seller.id = nextID++;
+				seller.id = nextID;
+				nextID++;
 				mockSellers.push(seller);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);

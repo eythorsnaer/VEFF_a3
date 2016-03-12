@@ -1,19 +1,33 @@
 <!--
 <div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!</div>
 -->
+<div ng-show="isLoading">
+	<loading-message></loading-message>
+</div>
 
-<table>
-	<thead>
-		<tr>
-			<th translate="sellers.name"></th>
-			<th translate="sellers.Category">Category</th>
-		</tr>
-	</thead> 
-	<tbody>
-		<tr ng-repeat="s in sellers">
-			<td>{{s.name}}</td>
-			<td>{{s.category}}</td>
-		</tr>
-	</tbody>
+<div ng-hide="isLoading">
+	<button class="btn btn-primary" ng-click="onAddSeller()">
+		<i class="fa fa-plus">
+		<span>Add Seller<span>
+	</button>
 
-</table>
+	<table>
+		<thead>
+			<tr>			
+				<th>
+					<i class="fa fa-plus">
+					<span translate="sellers.Name">Seller Name<span>
+				</th>
+				<th translate="sellers.Category">Category</th>
+				<th>Edit</th>
+			</tr>
+		</thead> 
+		<tbody>
+			<tr ng-repeat="s in sellers">
+				<td>{{s.name}}</td>
+				<td>{{s.category}}</td>
+			</tr>
+		</tbody>
+
+	</table>
+</div>
