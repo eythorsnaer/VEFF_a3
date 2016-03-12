@@ -19,7 +19,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 		$scope.isSellerDlgOpen = true;
 		
 		SellerDlg.show().then(function(seller) {
-			AppResource.addSeller(seller).success(function(seller) {
+			AppResource.addSeller(seller).success(function(s) {
 				centrisNotify.success("sellers.Messages.SaveSucceeded"); //, "sellers.Ok");
 				$scope.isSellerDlgOpen = false;
 			}).error(function() {
@@ -35,7 +35,7 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 		$scope.isSellerDlgOpen = true;
 
 		SellerDlg.show(selectedSeller).then(function(seller) {
-			AppResource.updateSeller(selectedSeller.id, seller).success(function(seller) {
+			AppResource.updateSeller(selectedSeller.id, seller).success(function(s) {
 				centrisNotify.success("sellers.Messages.UpadateSucceeded");
 				$scope.isSellerDlgOpen = false;
 			}).error(function() {

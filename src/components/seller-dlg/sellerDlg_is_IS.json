@@ -1,8 +1,6 @@
 {
 	"sellerDlg" : {
 		"Title":				     "Bæta við Seljanda",
-		"Add":						 "Bæta við",
-		"Cancel":					 "Hætta við",
 		"Messages" : {
 			"NameRequired":			 "Vinsamlegast sláðu inn nafn seljanda",
 			"CategoryRequired":		 "Vinsamlegast sláðu inn flokk",

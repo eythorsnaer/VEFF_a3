@@ -1,0 +1,19 @@
+<div class="addEditProduct">
+	<label>
+		<b><span translate="product.Title"></span></b>
+	</label>
+	<div>
+		<input type="text" ng-model="product.name" />
+		<input type="text" ng-model="product.price" />
+		<input type="text" ng-model="product.quantitySold" />
+		<input type="text" ng-model="product.quantityInStock" />
+		<input type="text" ng-model="product.imagePath" />
+	</div>
+
+	<button class="btn btn-primary" ng-click="onOk()">
+		<span translate="shared.Add"></span>
+	</button>
+	<button class="btn btn-primary" ng-click="onCancel()">
+		<span translate="shared.Cancel"></span>
+	</button>
+</div>

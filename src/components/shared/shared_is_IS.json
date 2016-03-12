@@ -3,6 +3,9 @@
 		"IS":						 "Íslenska",
 		"EN":						 "Enska",
 		"LoadingMessage":			 "Sæki gögn .... Dúdúddúdú dú :p",
-		"Back":						 "Farðu burt!!!"
+		"Back":						 "Farðu burt!!!",
+		"Add": 						 "Bæta við",
+		"Cancel": 					 "Hætta við",
+		"Edit":						 "Uppfæra"
 	}
 }

@@ -1,8 +1,6 @@
 {
 	"sellerDlg" : {
 		"Title":					"Add Seller",
-		"Add":						"Add",
-		"Cancel":					"Cancel",
 		"Messages" : {
 			"NameRequired":			"Put the name in the box or it gets the hose again",
 			"CategoryRequired":		"Put the Category in the box or it gets the hose again",

@@ -1,0 +1,30 @@
+<div>
+	<img src="{{product.imagePath}}" alt="product picture" width="200"/>
+	<div> 
+		<span>
+			<label translate="product.Name"></label>
+			<p>{{product.name}}</p>
+		</span>
+		<span>
+			<label translate="product.Price"></label>
+			<p>{{product.price}}</p>
+		</span>
+	</div>
+	<div> 
+		<span>
+			<label translate="product.QuantitySold"></label>
+			<p>{{product.quantitySold}}</p>
+		</span>
+		<span>
+			<label translate="product.QuantityInStock"></label>
+			<p>{{product.quantityInStock}}</p>
+		</span>
+	</div>
+	<div ng-ng-controller="SellerDetailsController">
+		<button class="btn btn-default" ng-click="onEditProduct(product)" >
+			<i class="fa fa-plus"/>
+			<span translate="shared.Edit"></span>
+		</button>
+	</div>
+
+</div>

@@ -3,6 +3,9 @@
 		"IS":						 "Icelandic",
 		"EN":						 "English",
 		"LoadingMessage":			 "Loading Data....",
-		"Back":						 "Back"
+		"Back":						 "Back",
+		"Add": 						 "Add",
+		"Cancel": 					 "Cancel",
+		"Edit":						 "Edit"
 	}
 }

@@ -1,0 +1,22 @@
+{
+	"product" : {
+		"Title":                     	"Vörulisti",
+		"Name":						 	"Vöruheiti",
+		"Price":					 	"Verð",
+		"QuantitySold":			     	"Fjöldi seldra vara",
+		"QuantityInStock":			 	"Magn á lager",
+		"ImagePath": 				 	"Slóð á mynd", 
+		"Messages" : {
+			"LoadFailed":           	"Ekki tókst að sækja lista yfir vörum",
+			"SaveSucceeded":        	"Nýrri vöru hefur verið bætt við",
+			"SaveFailed":           	"Því miður tókst ekki að bæta við nýrri vöru",
+			"UpdateSucceeded":			"Varan hefur verið uppfærð",
+			"UpdateFailed":				"Því miður tókst ekki að uppfæra vöruna",
+			"NameRequired":				"Vinsamlegast sláðu inn vöruheiti",
+			"PriceRequired":			"Vinsamlegast sláðu inn verð",
+			"QuantitySoldRequired":		"Vinsamlegast sláðu inn fjölda seldra vara",
+			"QunatityInStockRequired":  "Vinsamlegast sláðu inn magn á lager",
+			"ImagePathRequired":	    "Vinsamlegast sláðu inn slóð á mynd"
+		}
+	}
+}
