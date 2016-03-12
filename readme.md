@@ -9,7 +9,7 @@ The project should be unit tested, code coverage determines the grade for that p
 * Bjartur ---(10%) All products tab
 * -----------(5%) Top 10 products tab
 * Bjartur ---(10%) Add/edit product
-* Eyþór   ---(5%) All tables sortable
+* Eyþór -----(5%) All tables sortable
 * -----------(5%) All input validated
 * -----------(5%) Translated
 * -----------(5%) Toastr feedback after add/edit
