@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 </head>
-
+<body>
 	<main class="container-fluid">
 		<div class="Main clearfix" ng-view id="content"></div>
 	</main>
@@ -18,7 +18,7 @@
 	<!-- error messages  -->
 	<toaster-container></toaster-container>
 
-	<div ng-controller="LanguageController">
+	<div class="languageButtons" ng-controller="LanguageController">
 		<button ng-click="onChangeToIS()">is</button>
 		<button ng-click="onChangeToEN()">en</button>
 	</div>

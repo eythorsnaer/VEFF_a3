@@ -5,48 +5,46 @@
 	<loading-message></loading-message>
 </div>
 
-<div ng-hide="isLoading">
+<div class="content" ng-hide="isLoading">
 	<div>
 		<button class="btn btn-primary" ng-click="onAddSeller()">
 			<i class="fa fa-plus"/>
 			<span translate="sellers.AddSeller"></span>
 		</button>
 	</div>
-	
-	<!--ng-grid-->
-	<div class="gridStyle" ng-grid="gridOptions"></div>
 
-	<table>
-		<thead>
-			<tr table-sort="name">
-				<th></th>			
-				<th data-columnName="name">
-					<i class="fa fa-plus"/>
-					<span translate="sellers.Name"></span>
-				</th>
-				<th data-columnName="category" translate="sellers.Category"></th>
-				<th translate="sellers.Edit"></th>
-			</tr>
-		</thead> 
-		<tbody>
-			<tr ng-repeat="s in sellers | orderBy:predicate:reverse">
-				<td>
-					<img ng-src="{{s.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="50" width="50">
-				</td>
-				<td>
-					<a ng-href="#/sellers/{{s.id}}">{{s.name}}</a>
-				</td>
-				<td>{{s.category}}</td>
-				<td>
-					<div ng-show="!isSellerDlgOpen">
-						<button class="btn btn-default" ng-click="onEditSeller(s)">
-							<i class="fa fa-plus"/>
-							<span translate="sellers.Edit"></span>
-						</button>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-
-	</table>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr table-sort="name">
+					<th></th>			
+					<th data-columnName="name">
+						<i class="fa fa-plus"/>
+						<span translate="sellers.Name"></span>
+					</th>
+					<th data-columnName="category" translate="sellers.Category"></th>
+					<th></th>
+				</tr>
+			</thead> 
+			<tbody>
+				<tr ng-repeat="s in sellers | orderBy:predicate:reverse">
+					<td>
+						<img ng-src="{{s.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="50" width="50">
+					</td>
+					<td>
+						<a ng-href="#/sellers/{{s.id}}">{{s.name}}</a>
+					</td>
+					<td>{{s.category}}</td>
+					<td>
+						<div ng-show="!isSellerDlgOpen">
+							<button class="btn btn-default" ng-click="onEditSeller(s)">
+								<i class="fa fa-plus"/>
+								<span translate="sellers.Edit"></span>
+							</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
