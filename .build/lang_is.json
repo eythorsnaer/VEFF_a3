@@ -32,17 +32,6 @@
 			"QuantityInStockIsNaN": "Nej Skat, magn á lager verður að vera tala"
 		}
 	},
-	"sellerDlg": {
-		"Title": "Bæta við Seljanda",
-		"Name": "Nafn",
-		"Category": "Flokkur",
-		"ImagePath": "Slóð á mynd",
-		"Messages": {
-			"NameRequired": "Vinsamlegast sláðu inn nafn seljanda",
-			"CategoryRequired": "Vinsamlegast sláðu inn flokk",
-			"ImagePathRequired": "Vinsamlegast sláðu inn slóð á mynd"
-		}
-	},
 	"sellers": {
 		"Title": "Seljendur",
 		"Name": "Nafn",
@@ -58,6 +47,17 @@
 			"UpdateFailed": "Því miður tókst ekki að uppfæra seljanda"
 		}
 	},
+	"sellerDlg": {
+		"Title": "Bæta við Seljanda",
+		"Name": "Nafn",
+		"Category": "Flokkur",
+		"ImagePath": "Slóð á mynd",
+		"Messages": {
+			"NameRequired": "Vinsamlegast sláðu inn nafn seljanda",
+			"CategoryRequired": "Vinsamlegast sláðu inn flokk",
+			"ImagePathRequired": "Vinsamlegast sláðu inn slóð á mynd"
+		}
+	},
 	"shared": {
 		"IS": "Íslenska",
 		"EN": "Enska",
@@ -66,7 +66,7 @@
 		"Add": "Bæta við",
 		"Cancel": "Hætta við",
 		"Edit": "Uppfæra",
-		"AltTag": "Þessi var hefur ekki meðfylgjandi mynd",
+		"AltTag": "Þessi vara hefur ekki meðfylgjandi mynd",
 		"allProducts": "Allar vörur",
 		"topTen": "Topp tíu vörur",
 		"noProducts": "Þessi sölumaður hefur engar skráðar vörur"
