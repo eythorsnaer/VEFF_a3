@@ -13,15 +13,18 @@
 		</button>
 	</div>
 	
+	<!--ng-grid-->
+	<div class="gridStyle" ng-grid="gridOptions"></div>
+
 	<table>
 		<thead>
-			<tr table-sort="name">
+			<tr table-sort="Name">
 				<th></th>			
-				<th>
+				<th data-columnName="Name">
 					<i class="fa fa-plus"/>
 					<span translate="sellers.Name"></span>
 				</th>
-				<th translate="sellers.Category"></th>
+				<th data-columnName="Category" translate="sellers.Category"></th>
 				<th translate="sellers.Edit"></th>
 			</tr>
 		</thead> 
