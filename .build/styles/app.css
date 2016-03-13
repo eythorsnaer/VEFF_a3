@@ -1,22 +1,21 @@
-.content{
+/*.content{
     width: 500px;
     padding-top: 10%;
     margin:0 auto;
-}
+}*/
 
 .languageButtons{
 	width: 75px;
     padding-top: 5%;
     margin:0 auto;
 }
-
+/*
 body {
 	background-image: url("http://p1.pichost.me/i/42/1658737.jpg");
 	background-size: 100%;
-}
+}*/
 
 th, td {
-	background-color: rgba(63,191,191,0.4);
 	font-weight: bold;
 	font-style: normal;
 	color: black;

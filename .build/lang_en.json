@@ -43,19 +43,6 @@
 			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again"
 		}
 	},
-	"shared": {
-		"IS": "Icelandic",
-		"EN": "English",
-		"LoadingMessage": "Loading data...",
-		"Back": "Back",
-		"Add": "Add",
-		"Cancel": "Cancel",
-		"Edit": "Edit",
-		"AltTag": "This product does not have an associated image",
-		"allProducts": "All products",
-		"topTen": "Top ten products",
-		"noProducts": "This seller does not have any registered products"
-	},
 	"sellers": {
 		"Title": "Sellers List",
 		"Name": "Name",
@@ -70,5 +57,18 @@
 			"UpdateSucceeded": "The seller has been updated",
 			"UpdateFailed": "Unfortunately we could not update the seller"
 		}
+	},
+	"shared": {
+		"IS": "Icelandic",
+		"EN": "English",
+		"LoadingMessage": "Loading data...",
+		"Back": "Back",
+		"Add": "Add",
+		"Cancel": "Cancel",
+		"Edit": "Edit",
+		"AltTag": "This product does not have an associated image",
+		"allProducts": "All products",
+		"topTen": "Top ten products",
+		"noProducts": "This seller does not have any registered products"
 	}
 }
