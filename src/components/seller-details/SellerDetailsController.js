@@ -33,13 +33,6 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 		$scope.products = sellerProducts;
 	});	
 
-	if ($scope.products.length === 0){
-		$scope.hasNoProducts = true;
-	}
-	else{
-		$scope.hasNoProducts = false;
-	}
-
 	AppResource.getSellerDetails(sellerID).success(function(seller) {
 		$scope.seller = seller;
 		$scope.isLoading = false;
@@ -52,6 +45,7 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 			AppResource.addSellerProduct(sellerID, product).success(function(p) {
 				var newProduct = product;
 				$scope.products.push(newProduct);
+				$scope.hasProducts = true;
 				centrisNotify.success("products.Messages.UpadateSucceeded");
 			}).error(function() {
 				centrisNotify.error("products.Messages.UpdateFailed");
@@ -71,6 +65,12 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 		});
 	};
 
+	if ($scope.products.length === 0){
+		$scope.hasProducts = false;
+	}
+	else{
+		$scope.hasProducts = true;
+	}
 
 	function makeTopTen() {
 		temp = [];

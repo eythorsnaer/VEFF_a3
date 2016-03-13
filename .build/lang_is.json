@@ -43,6 +43,19 @@
 			"ImagePathRequired": "Vinsamlegast sláðu inn slóð á mynd"
 		}
 	},
+	"shared": {
+		"IS": "Íslenska",
+		"EN": "Enska",
+		"LoadingMessage": "Sæki gögn...",
+		"Back": "Til baka",
+		"Add": "Bæta við",
+		"Cancel": "Hætta við",
+		"Edit": "Uppfæra",
+		"AltTag": "Þessi vara hefur ekki meðfylgjandi mynd",
+		"allProducts": "Allar vörur",
+		"topTen": "Topp tíu vörur",
+		"noProducts": "Þessi sölumaður hefur engar skráðar vörur"
+	},
 	"sellers": {
 		"Title": "Seljendur",
 		"Name": "Nafn",
@@ -57,18 +70,5 @@
 			"UpdateSucceeded": "Seljandi hefur verið uppfærður",
 			"UpdateFailed": "Því miður tókst ekki að uppfæra seljanda"
 		}
-	},
-	"shared": {
-		"IS": "Íslenska",
-		"EN": "Enska",
-		"LoadingMessage": "Sæki gögn...",
-		"Back": "Til baka",
-		"Add": "Bæta við",
-		"Cancel": "Hætta við",
-		"Edit": "Uppfæra",
-		"AltTag": "Þessi var hefur ekki meðfylgjandi mynd",
-		"allProducts": "Allar vörur",
-		"topTen": "Topp tíu vörur",
-		"noProducts": "Þessi sölumaður hefur engar skráðar vörur"
 	}
 }
