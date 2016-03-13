@@ -5,7 +5,7 @@
 		"Price":					 	"Verð",
 		"QuantitySold":			     	"Fjöldi seldra vara",
 		"QuantityInStock":			 	"Magn á lager",
-		"ImagePath": 				 	"Slóð á mynd", 
+		"ImagePath": 				 	"Slóð á mynd",
 		"Messages" : {
 			"LoadFailed":           	"Ekki tókst að sækja lista yfir vörum",
 			"SaveSucceeded":        	"Nýrri vöru hefur verið bætt við",

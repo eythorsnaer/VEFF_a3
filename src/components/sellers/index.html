@@ -31,7 +31,7 @@
 		<tbody>
 			<tr ng-repeat="s in sellers | orderBy:predicate:reverse">
 				<td>
-					<img ng-src="{{s.imagePath}}" alt="profile picture" height="50" width="50">
+					<img ng-src="{{s.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="50" width="50">
 				</td>
 				<td>
 					<a ng-href="#/sellers/{{s.id}}">{{s.name}}</a>

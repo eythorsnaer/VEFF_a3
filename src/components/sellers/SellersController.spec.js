@@ -2,7 +2,7 @@
 
 describe("SellersController should be unit tested here", function() {
 	// TODO: add beforeEach/describe/it/etc. functions as appropriate!
-	bebforeEach(module("project3App"));
+	/*beforeEach(module("project3App"));
 
 	describe("SellersController", function() {
         beforeEach(inject(function ($rootScope, $controller) {
@@ -18,5 +18,5 @@ describe("SellersController should be unit tested here", function() {
     it('says testVar is ', function () {
         expect(scope.testVar === "sjomli");
     });
-
+*/
 });

@@ -5,7 +5,7 @@
 		"Price":					 	"Price",
 		"QuantitySold":			     	"Quantity Sold",
 		"QuantityInStock":			 	"Quantity In Stock",
-		"ImagePath": 				 	 "Image Path", 
+		"ImagePath": 				 	"Image Path",
 		"Messages" : {	
 			"LoadFailed":            	"Failed to load the list of products",
 			"SaveSucceeded":        	"The product has been saved",
