@@ -20,24 +20,24 @@
 
 <div ng-show="allTab">
 	<ul class="nav nav-tabs">
-	  <li class="active"><a>All products</a></li>
-	  <li><a ng-click="allTab = false" ng-init="allTab=true">Top ten</a></li>
+	  <li class="active"><a translate="shared.allProducts"></a></li>
+	  <li ng-click="allTab = false" ng-init="allTab=true"><a translate="shared.topTen"></a></li>
 	</ul>
 
 	<product-card ng-repeat="p in products" ng-model="p">
 	</product-card>
 
-	<div ng-show="{{hasNoProducts}}" class="alert alert-info" role="alert">This user has no products!</div>
+	<div ng-show="{{hasNoProducts}}" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
 </div>
 
 <div ng-hide="allTab">
 	<ul class="nav nav-tabs">
-	  <li><a ng-click="allTab = true">All products</a></li>
-	  <li class="active"><a>Top ten</a></li>
+	  <li ng-click="allTab = true"><a translate="shared.allProducts"></a></li>
+	  <li class="active"><a translate="shared.topTen"></a></li>
 	</ul>
 
 	<product-card ng-repeat="p in topTen" ng-model="p">
 	</product-card>
 
-	<div ng-show="{{hasNoProducts}}" class="alert alert-info" role="alert">This user has no products!</div>
+	<div ng-show="{{hasNoProducts}}" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
 </div>

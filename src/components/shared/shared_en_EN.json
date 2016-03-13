@@ -2,11 +2,14 @@
 	"shared" : {
 		"IS":						 "Icelandic",
 		"EN":						 "English",
-		"LoadingMessage":			 "Loading Data....",
+		"LoadingMessage":			 "Loading data...",
 		"Back":						 "Back",
 		"Add": 						 "Add",
 		"Cancel": 					 "Cancel",
 		"Edit":						 "Edit",
-		"AltTag":					 "This image is broken, and so are you!"
+		"AltTag":					 "This product does not have an associated image",
+		"allProducts":               "All products",
+		"topTen":                    "Top ten products",
+		"noProducts":                "This seller does not have any registered products"
 	}
 }
