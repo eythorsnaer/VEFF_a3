@@ -2,11 +2,14 @@
 	"shared" : {
 		"IS":						 "Íslenska",
 		"EN":						 "Enska",
-		"LoadingMessage":			 "Sæki gögn .... Dúdúddúdú dú :p",
-		"Back":						 "Farðu burt!!!",
+		"LoadingMessage":			 "Sæki gögn...",
+		"Back":						 "Til baka",
 		"Add": 						 "Bæta við",
 		"Cancel": 					 "Hætta við",
 		"Edit":						 "Uppfæra",
-		"AltTag":					 "Þessi mynd er því miður ekki boðleg"
+		"AltTag":					 "Þessi var hefur ekki meðfylgjandi mynd",
+		"allProducts":               "Allar vörur",
+		"topTen":                    "Topp tíu vörur",
+		"noProducts":                "Þessi sölumaður hefur engar skráðar vörur"
 	}
 }
