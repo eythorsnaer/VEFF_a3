@@ -16,7 +16,10 @@
 			"PriceRequired":			"Vinsamlegast sláðu inn verð",
 			"QuantitySoldRequired":		"Vinsamlegast sláðu inn fjölda seldra vara",
 			"QunatityInStockRequired":  "Vinsamlegast sláðu inn magn á lager",
-			"ImagePathRequired":	    "Vinsamlegast sláðu inn slóð á mynd"
+			"ImagePathRequired":	    "Vinsamlegast sláðu inn slóð á mynd",
+			"PriceIsNaN":				"Nej Skat, verð á vöru verður að vera tala",
+			"QuantitySoldIsNaN":		"Nej Skat, fjöldi seldra vara verður að vera tala",
+			"QuantityInStockIsNaN":		"Nej Skat, magn á lager verður að vera tala",
 		}
 	}
 }
