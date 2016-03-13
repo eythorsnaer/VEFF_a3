@@ -6,7 +6,10 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 	$scope.isLoading = true;
 	$scope.products = [];
 	$scope.topTen = [];
+	var temp = [];
 	var product;
+	var value;
+	var a;
 
 	if ($routeParams.id == null){
 		$location.path("");
@@ -56,31 +59,26 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 		});
 	};
 
-	function exists(id, array){
-		for (var i = 0; i < array.length; i++){
-			if (array[i].id === id)
-			{
-				return true;
+	for (var i = 0; i < $scope.products.length; i++){
+		temp.push($scope.products[i]);
+	}
+
+	for (i = 0; i < 10 && i < temp.length; i++){
+		
+		product = temp[i];
+		value = i;
+		
+		for (var j = i + 1; j < temp.length; j++){
+			if (product.quantitySold < temp[j].quantitySold){
+				product = temp[j];
+				value = j;
 			}
 		}
 
-		return false;
+		a = temp[i];
+		temp[i] = temp[value];
+		temp[value] = a;
+
+		$scope.topTen.push(temp[i]);
 	}
-
-	for (var i = 0; $scope.topTen.length < 10 && i < $scope.products.length; i++){
-		
-		product = $scope.products[i];
-
-		if (!exists(product.id, $scope.topTen)){
-			for (var j = 0; j < $scope.products.length; j++){
-		
-				if (product.quantitySold < $scope.products[j].quantitySold && !exists($scope.products[j].id, $scope.topTen)){
-					product = $scope.products[j];
-				}
-			}
-
-			$scope.topTen.push(product);
-		}
-	}
-
 });
