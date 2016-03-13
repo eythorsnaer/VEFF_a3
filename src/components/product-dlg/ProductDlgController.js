@@ -50,15 +50,15 @@ function ProductDlgController($scope, centrisNotify, modalParam) {
 
 		//should be number
 		if(isNaN($scope.product.price)) {
-			centrisNotify.error("product.Messages.PriceRequired");
+			centrisNotify.error("product.Messages.PriceIsNaN", "products.Fail");
 			return;
 		}
 		if(isNaN($scope.product.quantitySold)){
-			centrisNotify.error("product.Messages.QuantitySoldRequired");
+			centrisNotify.error("product.Messages.QuantitySoldIsNaN", "products.Fail");
 			return;
 		}
-		if(isNaN($scope.product.quantitySold)) {
-			centrisNotify.error("product.Messages.QunatityInStockRequired");
+		if(isNaN($scope.product.quantityInStock)) {
+			centrisNotify.error("product.Messages.QunatityInStockIsNaN", "products.Fail");
 			return;
 		}
 
