@@ -14,7 +14,11 @@
 			"PriceRequired":			"Put the Price in the box or it gets the hose again",
 			"QuantitySoldRequired":		"Put the Quantity Sold in the box or it gets the hose again",
 			"QunatityInStockRequired":  "Put the Quantity in Stock in the box or it gets the hose again",
-			"ImagePathRequired":	    "Put the Image Path in the box or it gets the hose again"
+			"ImagePathRequired":	    "Put the Image Path in the box or it gets the hose again",
+			"PriceIsNaN":				"Price is not a number",
+			"QuantitySoldIsNaN":		"QuantitySold is not a number",
+			"QuantityInStockIsNaN":		"Quantity In Stock is not a number"
+
 		}
 	}
 }
