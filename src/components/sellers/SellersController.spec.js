@@ -1,25 +1,22 @@
-"use strict";
+beforeEach(module("project3App"));
 
-describe("SellersController should be unit tested here", function() {
-	// TODO: add beforeEach/describe/it/etc. functions as appropriate!
-	beforeEach(module("project3App"));
+var sellersController, scope, AppResource, centrisNotify;
 
-    var SellersController, scope;
+describe("SellersController", function() {
+    beforeEach(inject(function ($rootScope, $controller, AppResource) {
+    	scope = $rootScope.$new();
 
-	describe("SellersController", function() {
+    	sellersController = $controller("SellersController", {
+            $scope: scope,
+            AppResource: AppResource
+        });
+    }));
 
-        beforeEach(inject(function ($rootScope, AppResource, centrisNotify, $controller) {
-        	scope = $rootScope.$new();
-
-        	SellersController = $controller('SellersController', {
-                $scope: scope,
-                
-            });
-        }));
+    it('says testVar is', function () {
+        expect(scope.testvar).toEqual("sjomli");
     });
 
-    it('says testVar is ', function () {
-        expect(scope.testVar === "sjomli");
+    it('checks if sellers is empty', function () {
+        expect(scope.sellers.length).not.toEqual(0);
     });
-
 });
