@@ -8,17 +8,10 @@
 		"ImagePath": 				 	 "Image Path", 
 		"Messages" : {	
 			"LoadFailed":            	"Failed to load the list of products",
+			"SaveSucceeded":        	"The product has been saved",
+			"SaveFailed":           	"Unfortunately we could not save the product",
 			"UpdateSucceeded":		 	"The product has been updated",
-			"UpdateFailed":			 	"Unfortunately we could not update the product",
-			"NameRequired":				"Put the Name in the box or it gets the hose again",
-			"PriceRequired":			"Put the Price in the box or it gets the hose again",
-			"QuantitySoldRequired":		"Put the Quantity Sold in the box or it gets the hose again",
-			"QunatityInStockRequired":  "Put the Quantity in Stock in the box or it gets the hose again",
-			"ImagePathRequired":	    "Put the Image Path in the box or it gets the hose again",
-			"PriceIsNaN":				"Price is not a number",
-			"QuantitySoldIsNaN":		"QuantitySold is not a number",
-			"QuantityInStockIsNaN":		"Quantity In Stock is not a number"
-
+			"UpdateFailed":			 	"Unfortunately we could not update the product"
 		}
 	}
 }

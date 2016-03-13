@@ -3,9 +3,9 @@
 		<b><span translate="sellerDlg.Title"></span></b>
 	</label>
 	<form name="addEditSellerFrom">
-		<input type="text" ng-model="seller.name" />
-		<input type="text" ng-model="seller.category" />
-		<input type="text" ng-model="seller.imagePath" />
+		<input type="text" ng-model="seller.name" placeholder="" translate translate-attr-placeholder="sellerDlg.Name"/>
+		<input type="text" ng-model="seller.category" placeholder="" translate translate-attr-placeholder="sellerDlg.Category"/>
+		<input type="text" ng-model="seller.imagePath" placeholder="" translate translate-attr-placeholder="sellerDlg.ImagePath"/>
 	</Form>
 
 	<button class="btn btn-primary" ng-click="onOk()">

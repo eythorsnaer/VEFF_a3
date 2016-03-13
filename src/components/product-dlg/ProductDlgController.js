@@ -28,37 +28,37 @@ function ProductDlgController($scope, centrisNotify, modalParam) {
 		//product validation
 		//should not be empty
 		if($scope.product.name.length === 0) {
-			centrisNotify.error("product.Messages.NameRequired");
+			centrisNotify.error("productDlg.Messages.NameRequired");
 			return;
 		}
 		if($scope.product.price.length === 0) {
-			centrisNotify.error("product.Messages.PriceRequired");
+			centrisNotify.error("productDlg.Messages.PriceRequired");
 			return;
 		}
 		if($scope.product.quantitySold.length === 0){
-			centrisNotify.error("product.Messages.QuantitySoldRequired");
+			centrisNotify.error("productDlg.Messages.QuantitySoldRequired");
 			return;
 		}
 		if($scope.product.quantitySold.length === 0) {
-			centrisNotify.error("product.Messages.QunatityInStockRequired");
+			centrisNotify.error("productDlg.Messages.QunatityInStockRequired");
 			return;
 		}
 		if($scope.product.imagePath.length === 0){
-			centrisNotify.error("product.Messages.ImagePathRequired");
+			centrisNotify.error("productDlg.Messages.ImagePathRequired");
 			return;
 		}
 
 		//should be number
 		if(isNaN($scope.product.price)) {
-			centrisNotify.error("product.Messages.PriceIsNaN", "products.Fail");
+			centrisNotify.error("productDlg.Messages.PriceIsNaN", "products.Fail");
 			return;
 		}
 		if(isNaN($scope.product.quantitySold)){
-			centrisNotify.error("product.Messages.QuantitySoldIsNaN", "products.Fail");
+			centrisNotify.error("productDlg.Messages.QuantitySoldIsNaN", "products.Fail");
 			return;
 		}
 		if(isNaN($scope.product.quantityInStock)) {
-			centrisNotify.error("product.Messages.QunatityInStockIsNaN", "products.Fail");
+			centrisNotify.error("productDlg.Messages.QunatityInStockIsNaN", "products.Fail");
 			return;
 		}
 

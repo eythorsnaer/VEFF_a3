@@ -1,6 +1,9 @@
 {
 	"sellerDlg" : {
 		"Title":					"Add Seller",
+		"Name":                      "Name",
+		"Category":					 "Category",
+		"ImagePath":				 "Image Path",
 		"Messages" : {
 			"NameRequired":			"Put the name in the box or it gets the hose again",
 			"CategoryRequired":		"Put the Category in the box or it gets the hose again",

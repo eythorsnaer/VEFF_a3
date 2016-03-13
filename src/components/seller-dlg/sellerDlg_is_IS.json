@@ -1,6 +1,9 @@
 {
 	"sellerDlg" : {
 		"Title":				     "Bæta við Seljanda",
+		"Name":                     "Nafn",
+		"Category":					"Flokkur",
+		"ImagePath":				"Slóð á mynd",
 		"Messages" : {
 			"NameRequired":			 "Vinsamlegast sláðu inn nafn seljanda",
 			"CategoryRequired":		 "Vinsamlegast sláðu inn flokk",
