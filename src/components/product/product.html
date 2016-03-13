@@ -1,14 +1,10 @@
 <div>
-	<img ng-src="{{product.imagePath}}" alt="{{'shared.AltTag' | translate}}" width="200"/>
+	<img ng-src="{{product.imagePath}}" alt="{{'shared.AltTag' | translate}}" width="200" height="200"/>
 	<div> 
-		<span>
 			<label translate="product.Name"></label>
 			<p>{{product.name}}</p>
-		</span>
-		<span>
 			<label translate="product.Price"></label>
-			<p>{{product.price}}</p>
-		</span>
+			<p>{{product.price}} kr.</p>
 	</div>
 	<div ng-controller="SellerDetailsController">
 		<button class="btn btn-default" ng-click="onEditProduct(product)" >
