@@ -12,9 +12,9 @@ describe("SellersController should be unit tested here", function() {
         appResource = AppResource;
         sellerDlg = SellerDlg;
 
-        spyOn(resource, 'getSellers').and.callThrough();
-        spyOn(resource, 'addSeller').and.callThrough();
-        spyOn(resource, 'updateSeller').and.callThrough();
+        spyOn(appResource, 'getSellers').and.callThrough();
+        spyOn(appResource, 'addSeller').and.callThrough();
+        spyOn(appResource, 'updateSeller').and.callThrough();
         spyOn(sellerDlg, 'show').and.callThrough();
 
     	SellersController = $controller('SellersController', {

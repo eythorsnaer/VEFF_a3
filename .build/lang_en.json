@@ -1,0 +1,74 @@
+{
+	"product": {
+		"Title": "Product List",
+		"Name": "Product Name",
+		"Price": "Price",
+		"QuantitySold": "Quantity Sold",
+		"QuantityInStock": "Quantity In Stock",
+		"ImagePath": "Image Path",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of products",
+			"SaveSucceeded": "The product has been saved",
+			"SaveFailed": "Unfortunately we could not save the product",
+			"UpdateSucceeded": "The product has been updated",
+			"UpdateFailed": "Unfortunately we could not update the product"
+		}
+	},
+	"productDlg": {
+		"Title": "Product List",
+		"Name": "Product Name",
+		"Price": "Price",
+		"QuantitySold": "Quantity Sold",
+		"QuantityInStock": "Quantity In Stock",
+		"ImagePath": "Image Path",
+		"Messages": {
+			"NameRequired": "Put the Name in the box or it gets the hose again",
+			"PriceRequired": "Put the Price in the box or it gets the hose again",
+			"QuantitySoldRequired": "Put the Quantity Sold in the box or it gets the hose again",
+			"QunatityInStockRequired": "Put the Quantity in Stock in the box or it gets the hose again",
+			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again",
+			"PriceIsNaN": "Price is not a number",
+			"QuantitySoldIsNaN": "QuantitySold is not a number",
+			"QuantityInStockIsNaN": "Quantity In Stock is not a number"
+		}
+	},
+	"sellerDlg": {
+		"Title": "Add Seller",
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Path",
+		"Messages": {
+			"NameRequired": "Put the name in the box or it gets the hose again",
+			"CategoryRequired": "Put the Category in the box or it gets the hose again",
+			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again"
+		}
+	},
+	"sellers": {
+		"Title": "Sellers List",
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Path",
+		"AddSeller": "Add Seller",
+		"Edit": "Edit",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of sellers",
+			"SaveSucceeded": "The seller has been added successfully",
+			"SaveFailed": "Unfortunately we could not add a new seller",
+			"UpdateSucceeded": "The seller has been updated",
+			"UpdateFailed": "Unfortunately we could not update the seller"
+		}
+	},
+	"shared": {
+		"IS": "Icelandic",
+		"EN": "English",
+		"LoadingMessage": "Loading data...",
+		"Back": "Back",
+		"Add": "Add",
+		"Cancel": "Cancel",
+		"Edit": "Edit",
+		"AltTag": "This product does not have an associated image",
+		"allProducts": "All products",
+		"topTen": "Top ten products",
+		"noProducts": "This seller does not have any registered products"
+	}
+}

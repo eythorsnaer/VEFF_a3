@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="project3App">
+<head>
+	<title>WEPO Assignment 3 - Online Web Store</title>
+	<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/7KwFUnl.jpg?1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/vendor.css">
+	<link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+<body>
+	<main class="container-fluid">
+		<div class="Main clearfix" ng-view id="content"></div>
+	</main>
+
+	<!-- error messages  -->
+	<toaster-container></toaster-container>
+
+	<div class="languageButtons" ng-controller="LanguageController">
+		<button ng-click="onChangeToIS()">is</button>
+		<button ng-click="onChangeToEN()">en</button>
+	</div>
+
+	<!-- inject:vendor:js -->
+	<script src="src/vendor/angular/angular.js"></script>
+	<script src="src/vendor/jquery/dist/jquery.js"></script>
+	<script src="src/vendor/angular-route/angular-route.js"></script>
+	<script src="src/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="src/vendor/angular-translate/angular-translate.js"></script>
+	<script src="src/vendor/angular-toastr/dist/angular-toastr.tpls.js"></script>
+	<script src="src/vendor/angular-mocks/angular-mocks.js"></script>
+	<script src="src/vendor/lodash/lodash.js"></script>
+	<script src="src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="src/vendor/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- endinject -->
+
+	<!-- inject:app:js -->
+	<script src="scripts/app-06337187.js"></script>
+	<script src="scripts/appconfig.js"></script>
+	<!-- endinject -->
+
+	<!-- inject:templates:js -->
+	<script src="scripts/templates-fed6021f.js"></script>
+	<!-- endinject -->
+
+</body>
+</html>
