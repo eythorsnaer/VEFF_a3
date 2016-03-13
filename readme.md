@@ -7,14 +7,14 @@ The project should be unit tested, code coverage determines the grade for that p
 * ✓ Eyþór ---(10%) Add/edit individuals
 * ✓ Eyþór ---(10%) Show details about a given individual
 * ✓ Bjartur -(10%) All products tab
-* Bjartur----(5%) Top 10 products tab
-* Eyþór -----(10%) Add/edit product
+* ✓ Bjartur----(5%) Top 10 products tab
+* ✓ Eyþór ---(10%) Add/edit product
 * ✓ Eyþór ---(5%) All tables sortable
-* -----------(5%) All input validated
-* -----------(5%) Translated
-* -----------(5%) Toastr feedback after add/edit
+* ✓ Eyþór -----(5%) All input validated
+* ✓ Eyþór ---(5%) Translated
+* ✓ Eyþór----(5%) Toastr feedback after add/edit
 * -----------(5%) Responsive layout
-* -----------(5%) Product directive
+* ✓ Bjartur -(5%) Product directive
 * -----------(20%) Unit tests for all code
 * -----------(10%) Coolness bon
 
