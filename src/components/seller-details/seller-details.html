@@ -18,10 +18,22 @@
 	<p>{{seller.category}}</p>
 </div>
 
-<ul class="nav nav-tabs">
-  <li class="active"><a href="/#/sellers/{{sellerID}}">All products</a></li>
-  <li><a href="/#/sellers/{{sellerID}}/topTen">Top ten</a></li>
-</ul>
+<div ng-show="allTab">
+	<ul class="nav nav-tabs">
+	  <li class="active"><a>All products</a></li>
+	  <li><a ng-click="allTab = false" ng-init="allTab=true">Top ten</a></li>
+	</ul>
 
-<product-card ng-repeat="p in products" ng-model="p">
-</product-card>
+	<product-card ng-repeat="p in products" ng-model="p">
+	</product-card>
+</div>
+
+<div ng-hide="allTab">
+	<ul class="nav nav-tabs">
+	  <li><a ng-click="allTab = true">All products</a></li>
+	  <li class="active"><a>Top ten</a></li>
+	</ul>
+
+	<product-card ng-repeat="p in topTen" ng-model="p">
+	</product-card>
+</div>
