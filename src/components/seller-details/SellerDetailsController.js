@@ -24,6 +24,11 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 		imagePath: 	""
 	};
 
+	$scope.$watch('products', function(newVal, oldVal) {
+        makeTopTen();
+    }, true);
+
+
 	AppResource.getSellerProducts(sellerID).success(function(sellerProducts){
 		$scope.products = sellerProducts;
 	});	
@@ -66,26 +71,33 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 		});
 	};
 
-	for (var i = 0; i < $scope.products.length; i++){
-		temp.push($scope.products[i]);
-	}
 
-	for (i = 0; i < 10 && i < temp.length; i++){
-		
-		product = temp[i];
-		value = i;
-		
-		for (var j = i + 1; j < temp.length; j++){
-			if (product.quantitySold < temp[j].quantitySold){
-				product = temp[j];
-				value = j;
-			}
+	function makeTopTen() {
+		temp = [];
+		$scope.topTen = [];
+
+		for (var i = 0; i < $scope.products.length; i++){
+			temp.push($scope.products[i]);
 		}
 
-		a = temp[i];
-		temp[i] = temp[value];
-		temp[value] = a;
+		for (i = 0; i < 10 && i < temp.length; i++){
+			product = temp[i];
+			value = i;
+			
+			for (var j = i + 1; j < temp.length; j++){
+				if (product.quantitySold < temp[j].quantitySold){
+					product = temp[j];
+					value = j;
+				}
+			}
 
-		$scope.topTen.push(temp[i]);
+			a = temp[i];
+			temp[i] = temp[value];
+			temp[value] = a;
+
+			$scope.topTen.push(temp[i]);
+		}
 	}
+	
+	makeTopTen();
 });
