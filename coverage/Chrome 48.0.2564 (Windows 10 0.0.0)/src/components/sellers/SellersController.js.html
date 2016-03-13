@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">5.56% </span>
+        <span class="strong">52.94% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/18</span>
+        <span class='fraction'>9/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">27.27% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>3/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">5.56% </span>
+        <span class="strong">52.94% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/18</span>
+        <span class='fraction'>9/17</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -80,36 +80,34 @@
 35
 36
 37
-38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+38</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -122,23 +120,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 &nbsp;
 angular.module("project3App").controller("SellersController",
-<span class="fstat-no" title="function not covered" >function SellersController($scope, AppResource, centrisNotify, SellerDlg) {</span>
+function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
-<span class="cstat-no" title="statement not covered" >	$scope.isLoading = true;</span>
-<span class="cstat-no" title="statement not covered" >	$scope.sellers = [];</span>
-<span class="cstat-no" title="statement not covered" >	$scope.testVar = "sjomli";</span>
+	$scope.isLoading = true;
+	$scope.sellers = [];
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	AppResource.getSellers().success(<span class="fstat-no" title="function not covered" >function(sellers) {</span></span>
-<span class="cstat-no" title="statement not covered" >		$scope.sellers = sellers;</span>
-<span class="cstat-no" title="statement not covered" >		$scope.isLoading = false;</span>
+	AppResource.getSellers().success(function(sellers) {
+		$scope.sellers = sellers;
+		$scope.isLoading = false;
 	}).error(<span class="fstat-no" title="function not covered" >function() {</span>
 <span class="cstat-no" title="statement not covered" >		$scope.isLoading = false;</span>
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	$scope.onAddSeller = <span class="fstat-no" title="function not covered" >function onAddSeller() {</span></span>
+	$scope.onAddSeller = function onAddSeller() {
 		
-<span class="cstat-no" title="statement not covered" >		SellerDlg.show().then(<span class="fstat-no" title="function not covered" >function(seller) {</span></span>
+		SellerDlg.show().then(<span class="fstat-no" title="function not covered" >function(seller) {</span>
 <span class="cstat-no" title="statement not covered" >			AppResource.addSeller(seller).success(<span class="fstat-no" title="function not covered" >function(s) {</span></span>
 <span class="cstat-no" title="statement not covered" >				centrisNotify.success("sellers.Messages.SaveSucceeded"); </span>
 			}).error(<span class="fstat-no" title="function not covered" >function() {</span>
@@ -147,7 +144,7 @@ angular.module("project3App").controller("SellersController",
 		});
 	};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	$scope.onEditSeller = <span class="fstat-no" title="function not covered" >function onEditSeller(selectedSeller) {</span></span>
+	$scope.onEditSeller = <span class="fstat-no" title="function not covered" >function onEditSeller(selectedSeller) {</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >		SellerDlg.show(selectedSeller).then(<span class="fstat-no" title="function not covered" >function(seller) {</span></span>
 <span class="cstat-no" title="statement not covered" >			AppResource.updateSeller(selectedSeller.id, seller).success(<span class="fstat-no" title="function not covered" >function(s) {</span></span>
@@ -163,7 +160,7 @@ angular.module("project3App").controller("SellersController",
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 13 2016 20:17:16 GMT+0000 (Greenwich Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 13 2016 23:08:25 GMT+0000 (Greenwich Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
