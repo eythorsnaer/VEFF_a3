@@ -6,7 +6,6 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	// add/update sellers etc.
 	$scope.isLoading = true;
 	$scope.sellers = [];
-	$scope.testVar = "sjomli";
 
 	AppResource.getSellers().success(function(sellers) {
 		$scope.sellers = sellers;

@@ -9,4 +9,9 @@ function LanguageController($scope, $translate) {
 	$scope.onChangeToEN = function onChangeToEN() {
 		$translate.use("en");
 	};
+
+	//for unit tests
+	function onChangeToFallback() {
+		$translate.use("");
+	}
 });
