@@ -26,6 +26,8 @@
 
 	<product-card ng-repeat="p in products" ng-model="p">
 	</product-card>
+
+	<div ng-show="{{hasNoProducts}}" class="alert alert-info" role="alert">This user has no products!</div>
 </div>
 
 <div ng-hide="allTab">
@@ -36,4 +38,6 @@
 
 	<product-card ng-repeat="p in topTen" ng-model="p">
 	</product-card>
+
+	<div ng-show="{{hasNoProducts}}" class="alert alert-info" role="alert">This user has no products!</div>
 </div>

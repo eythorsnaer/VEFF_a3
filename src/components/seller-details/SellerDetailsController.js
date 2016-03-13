@@ -28,6 +28,13 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 		$scope.products = sellerProducts;
 	});	
 
+	if ($scope.products.length === 0){
+		$scope.hasNoProducts = true;
+	}
+	else{
+		$scope.hasNoProducts = false;
+	}
+
 	AppResource.getSellerDetails(sellerID).success(function(seller) {
 		$scope.seller = seller;
 		$scope.isLoading = false;
