@@ -1,38 +1,25 @@
 'use strict';
 
-describe("SellerDetailsController should be unit tested here\n", function() {
-
+describe("ProductDlgController should be unit tested here\n", function() {
+/*
     beforeEach(module("project3App"));
 
-    var ctrl, scope, routeParams, appResource, productDlg, notify;
+    var ctrl, scope, notify, modal;
 
-    var mockLocation = {
-        path: "/sellers/1"
-    };
-
-    beforeEach(inject(function ($controller, $rootScope, $routeParams, $location, AppResource, ProductDlg, centrisNotify) {
+    beforeEach(inject(function ($controller, $rootScope, centrisNotify) {
         scope = $rootScope.$new();
-        routeParams = $routeParams;
-        routeParams.id = 1;
-        appResource = AppResource;
-        productDlg = ProductDlg;
-        mockLocation = $location;
         notify = centrisNotify;
+        //modal = modalParam;
 
-        spyOn(appResource, 'getSellerProducts').and.callThrough();
-        spyOn(appResource, 'getSellerDetails').and.callThrough();
-        spyOn(productDlg, 'show').and.callThrough();
-        spyOn(notify, 'success').and.callThrough();
-        spyOn(notify, 'error').and.callThrough();
-        spyOn(mockLocation, "path");
+        //spyOn(scope, "$close").and.callThrough();
+        //spyOn(scope, "$dismiss").and.callThrough();
+        spyOn(notify, "error").and.callThrough();
 
 
-        ctrl = $controller('SellerDetailsController', {
+        ctrl = $controller('ProductDlgController', {
             $scope: scope,
-            $routeParams: routeParams,
-            $location: mockLocation,
-            AppResource: appResource,
-            productDlg: ProductDlg
+            centrisNotify: notify
+            //modalParam: modal
         });
     }));
 
@@ -42,32 +29,21 @@ describe("SellerDetailsController should be unit tested here\n", function() {
     //check parameters
     it("vars should be defined", function() {
         expect(ctrl).toBeDefined();
-        expect(routeParams).toBeDefined();
-        expect(routeParams.id).toBeDefined();
-        expect(appResource).toBeDefined();
-        expect(productDlg).toBeDefined();
-        expect(mockLocation).toBeDefined();
-        expect(notify).toBeDefined();
+        expect(notify).toBeDefined();  
     });
 
     it("scope vars should be defined", function() {
-        expect(scope.isLoading).toBeDefined();
-        expect(scope.products).toBeDefined();
-        expect(scope.topTen).toBeDefined();
-        expect(scope.sellerID).toBeDefined();
-        expect(scope.seller).toBeDefined();
-        expect(scope.hasProducts).toBeDefined();
-        expect(scope.onAddProduct).toBeDefined();
-        expect(scope.onEditProduct).toBeDefined();
+        expect(scope.product).toBeDefined();
+        
     });
-/*
+
     it("vars should be defined\n", function() {
         expect(ctrl.temp).toBeDefined();
         expect(ctrl.product).toBeDefined();
         expect(ctrl.value).toBeDefined();
         expect(ctrl.a).toBeDefined();
     });
-*/
+
 
     it("scope vars should be initalized", function() {
         expect(scope.isLoading).toBe(false);
@@ -85,15 +61,12 @@ describe("SellerDetailsController should be unit tested here\n", function() {
 
     //create mock product
     var mockProduct = {
-        id: 1,
-        product: {
-            id: 23,
-            name: "svali",
-            price: 2990,
-            quantitySold: 45,
-            quantityInStock: 900,
-            imagePath: "imgur.com/sjomli/sjomli.jpg"
-        }
+        id: 23,
+        name: "svali",
+        price: 2990,
+        quantitySold: 45,
+        quantityInStock: 900,
+        imagePath: "imgur.com/sjomli/sjomli.jpg"
     };
 
     //onAddProduct()
@@ -116,7 +89,7 @@ describe("SellerDetailsController should be unit tested here\n", function() {
         expect(productDlg.show).toHaveBeenCalled();
     });
 
-
+*/
 });
 
 

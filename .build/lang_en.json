@@ -32,6 +32,17 @@
 			"QuantityInStockIsNaN": "Quantity In Stock is not a number"
 		}
 	},
+	"sellerDlg": {
+		"Title": "Add Seller",
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Path",
+		"Messages": {
+			"NameRequired": "Put the name in the box or it gets the hose again",
+			"CategoryRequired": "Put the Category in the box or it gets the hose again",
+			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again"
+		}
+	},
 	"sellers": {
 		"Title": "Sellers List",
 		"Name": "Name",
@@ -45,17 +56,6 @@
 			"SaveFailed": "Unfortunately we could not add a new seller",
 			"UpdateSucceeded": "The seller has been updated",
 			"UpdateFailed": "Unfortunately we could not update the seller"
-		}
-	},
-	"sellerDlg": {
-		"Title": "Add Seller",
-		"Name": "Name",
-		"Category": "Category",
-		"ImagePath": "Image Path",
-		"Messages": {
-			"NameRequired": "Put the name in the box or it gets the hose again",
-			"CategoryRequired": "Put the Category in the box or it gets the hose again",
-			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again"
 		}
 	},
 	"shared": {
