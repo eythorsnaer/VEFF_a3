@@ -54,6 +54,35 @@ body {
 }
 
 .addProductContainer {
-  
   margin: 3% 0%;
+}
+
+.sellersContainer {
+  margin: 3% 0%;
+}
+
+.icelandic>img {
+  width: 50px;
+  height: 40px;
+}
+
+.english>img {
+  width: 50px;
+  height: 40px;
+}
+
+.addEditSeller {
+  margin: 30px;
+}
+
+.addEditSeller>* {
+  margin: 4px;
+}
+
+.addEditProduct {
+  margin: 30px;
+}
+
+.addEditProduct>* {
+  margin: 4px;
 }
