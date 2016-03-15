@@ -1,19 +1,4 @@
 {
-	"product": {
-		"Title": "Vörulisti",
-		"Name": "Vöruheiti",
-		"Price": "Verð",
-		"QuantitySold": "Fjöldi seldra vara",
-		"QuantityInStock": "Magn á lager",
-		"ImagePath": "Slóð á mynd",
-		"Messages": {
-			"LoadFailed": "Ekki tókst að sækja lista yfir vörum",
-			"SaveSucceeded": "Nýrri vöru hefur verið bætt við",
-			"SaveFailed": "Því miður tókst ekki að bæta við nýrri vöru",
-			"UpdateSucceeded": "Varan hefur verið uppfærð",
-			"UpdateFailed": "Því miður tókst ekki að uppfæra vöruna"
-		}
-	},
 	"productDlg": {
 		"Title": "Vörulisti",
 		"Name": "Vöruheiti",
@@ -30,6 +15,21 @@
 			"PriceIsNaN": "Nej Skat, verð á vöru verður að vera tala",
 			"QuantitySoldIsNaN": "Nej Skat, fjöldi seldra vara verður að vera tala",
 			"QuantityInStockIsNaN": "Nej Skat, magn á lager verður að vera tala"
+		}
+	},
+	"product": {
+		"Title": "Vörulisti",
+		"Name": "Vöruheiti",
+		"Price": "Verð",
+		"QuantitySold": "Fjöldi seldra vara",
+		"QuantityInStock": "Magn á lager",
+		"ImagePath": "Slóð á mynd",
+		"Messages": {
+			"LoadFailed": "Ekki tókst að sækja lista yfir vörum",
+			"SaveSucceeded": "Nýrri vöru hefur verið bætt við",
+			"SaveFailed": "Því miður tókst ekki að bæta við nýrri vöru",
+			"UpdateSucceeded": "Varan hefur verið uppfærð",
+			"UpdateFailed": "Því miður tókst ekki að uppfæra vöruna"
 		}
 	},
 	"sellerDlg": {

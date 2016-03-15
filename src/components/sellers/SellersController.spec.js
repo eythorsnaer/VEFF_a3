@@ -17,7 +17,7 @@ describe("SellersController should be unit tested here\n", function() {
         show: function() {
             return {
                 then: function(fn){
-                    fn(mockseller);
+                    fn(mockSeller);
                 }
             };
         }

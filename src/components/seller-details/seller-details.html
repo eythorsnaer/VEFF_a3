@@ -4,8 +4,8 @@
 
 <div ng-hide="isLoading">
 	<div >
-		<button class="btn btn-primary glyphicon glyphicon-plus" ng-click="onAddProduct()">
-			<i class="fa fa-plus"/>
+		<button class="btn btn-primary" ng-click="onAddProduct()">
+			<span class="glyphicon glyphicon-plus"/>
 			<span translate="shared.Add"></span>
 		</button>
 	</div>
@@ -13,31 +13,37 @@
 	<div>
 		<a href="#/"><span translate="shared.Back"></span></a>
 	</div>
-	<img src="{{seller.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="200" width="200">
-	<h2>{{seller.name}}</h2>
-	<p>{{seller.category}}</p>
-</div>
+	<div class="SellerDetailContainer">
+		<div class="SellerImageContainer">
+			<img src="{{seller.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="200" width="200">
+		</div>
+		
+		<h2>{{seller.name}}</h2>
+		<p>{{seller.category}}</p>
+	</div>
 
-<div ng-show="allTab">
-	<ul class="nav nav-tabs">
-	  <li class="active"><a translate="shared.allProducts"></a></li>
-	  <li ng-click="allTab = false" ng-init="allTab=true"><a translate="shared.topTen"></a></li>
-	</ul>
+	<div ng-show="allTab">
+		<ul class="nav nav-tabs">
+		  <li class="active"><a translate="shared.allProducts"></a></li>
+		  <li ng-click="allTab = false" ng-init="allTab=true"><a translate="shared.topTen"></a></li>
+		</ul>
 
-	<product-card ng-repeat="p in products" ng-model="p">
-	</product-card>
+		<product-card ng-repeat="p in products" ng-model="p">
+		</product-card>
 
-	<div ng-hide="hasProducts" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
-</div>
+		<div ng-hide="hasProducts" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
+	</div>
 
-<div ng-hide="allTab">
-	<ul class="nav nav-tabs">
-	  <li ng-click="allTab = true"><a translate="shared.allProducts"></a></li>
-	  <li class="active"><a translate="shared.topTen"></a></li>
-	</ul>
+	<div ng-hide="allTab">
+		<ul class="nav nav-tabs">
+		  <li ng-click="allTab = true"><a translate="shared.allProducts"></a></li>
+		  <li class="active"><a translate="shared.topTen"></a></li>
+		</ul>
 
-	<product-card ng-repeat="p in topTen" ng-model="p">
-	</product-card>
+		<product-card ng-repeat="p in topTen" ng-model="p">
+		</product-card>
 
-	<div ng-hide="hasProducts" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
+		<div ng-hide="hasProducts" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
+	</div>
+
 </div>
