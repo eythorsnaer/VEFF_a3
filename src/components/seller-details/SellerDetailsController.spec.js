@@ -51,6 +51,7 @@ describe("SellerDetailsController should be unit tested here\n", function() {
 
     //test =================================================
 
+
     //check parameters
     it("vars should be defined", function() {
         expect(ctrl).toBeDefined();
@@ -81,6 +82,8 @@ describe("SellerDetailsController should be unit tested here\n", function() {
         expect(scope.seller).not.toEqual(undefined);
         expect(scope.hasProducts).toBe(true);
     });
+
+
 
     it("getSellerDetails should have been called", function() {
         appResource.getSellerDetails();

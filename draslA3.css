@@ -37,8 +37,6 @@ body {
           transform: scale(1.1);
 }
 
-
-
 #sectionContent {
 
 	
@@ -49,6 +47,6 @@ body {
 }
 
 .SellerImageContainer {
-	border-radius:80% 20% / 20% 80%;
+	
 }
 
