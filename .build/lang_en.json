@@ -1,4 +1,19 @@
 {
+	"product": {
+		"Title": "Product List",
+		"Name": "Product Name",
+		"Price": "Price",
+		"QuantitySold": "Quantity Sold",
+		"QuantityInStock": "Quantity In Stock",
+		"ImagePath": "Image Path",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of products",
+			"SaveSucceeded": "The product has been saved",
+			"SaveFailed": "Unfortunately we could not save the product",
+			"UpdateSucceeded": "The product has been updated",
+			"UpdateFailed": "Unfortunately we could not update the product"
+		}
+	},
 	"productDlg": {
 		"Title": "Product List",
 		"Name": "Product Name",
@@ -15,21 +30,6 @@
 			"PriceIsNaN": "Price is not a number",
 			"QuantitySoldIsNaN": "QuantitySold is not a number",
 			"QuantityInStockIsNaN": "Quantity In Stock is not a number"
-		}
-	},
-	"product": {
-		"Title": "Product List",
-		"Name": "Product Name",
-		"Price": "Price",
-		"QuantitySold": "Quantity Sold",
-		"QuantityInStock": "Quantity In Stock",
-		"ImagePath": "Image Path",
-		"Messages": {
-			"LoadFailed": "Failed to load the list of products",
-			"SaveSucceeded": "The product has been saved",
-			"SaveFailed": "Unfortunately we could not save the product",
-			"UpdateSucceeded": "The product has been updated",
-			"UpdateFailed": "Unfortunately we could not update the product"
 		}
 	},
 	"sellerDlg": {

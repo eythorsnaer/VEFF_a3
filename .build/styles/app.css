@@ -1,52 +1,20 @@
 
 .Sellers {
   /* TODO: add any Sellers-specific styles here! */
-
 }
-
-body {
-	background: url('http://4.bp.blogspot.com/-4Vi6mrkdXyY/T7X84DxUnjI/AAAAAAAAGxk/gfTeLmgFStw/s1600/Black+Cat+Wallpapers.jpg');
-	background-size: 100% auto;
-	background-repeat: repeat-y;
-
-	font-family: 'Open Sans', sans-serif;
-	font-style: black;
-	word-spacing: normal;
-	font-size: 20px;
-}
-
 
 .ProductContainer {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #51cecd;
-}
-.ProductContainer img {
-  border-radius: 7%;
-}
-.ProductContainer .productName {
-  float: left;
-  text-align: left;
-}
-.ProductContainer .productPrice {
-  text-align: right;
-}
-.ProductContainer:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-#sectionContent {
-
-	
+	padding-top: 20px;
+	margin-top: 10px;
+	position: static;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border:1px solid black;
 }
 
 .SellerDetailContainer {
-
+	margin-left: 40%;
 }
-
-.SellerImageContainer {
-	
-}
-

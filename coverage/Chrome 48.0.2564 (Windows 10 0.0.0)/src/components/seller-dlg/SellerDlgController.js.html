@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">5.56% </span>
+        <span class="strong">94.12% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/18</span>
+        <span class='fraction'>16/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">87.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>7/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">5.56% </span>
+        <span class="strong">94.12% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/18</span>
+        <span class='fraction'>16/17</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -84,23 +84,12 @@
 39
 40
 41
-42
-43
-44</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+42</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -108,69 +97,74 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
 angular.module("project3App").controller("SellerDlgController",
-<span class="fstat-no" title="function not covered" >function SellerDlgController($scope, centrisNotify, modalParam) {</span>
+function SellerDlgController($scope, centrisNotify) {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var seller = modalParam.seller;</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >	if (seller !== undefined) {</span>
+	<span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.seller !== undefined) {
 <span class="cstat-no" title="statement not covered" >		$scope.seller = {</span>
-			name: 		seller.name,
-			category: 	seller.category,
-			imagePath: 	seller.imagePath
+			name: 		$scope.seller.name,
+			category: 	$scope.seller.category,
+			imagePath: 	$scope.seller.imagePath
 		};
 	} 
 	else {
-<span class="cstat-no" title="statement not covered" >		$scope.seller = {</span>
+		$scope.seller = {
 			name: 		"",
 			category: 	"",
 			imagePath: 	""
 		};
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	$scope.onOk = <span class="fstat-no" title="function not covered" >function onOk() {</span></span>
+	$scope.onOk = function onOk() {
 		//TODO: validation !!!!
-<span class="cstat-no" title="statement not covered" >		if($scope.seller.name.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >			centrisNotify.error("sellerDlg.Messages.NameRequired");</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+		if($scope.seller.name.length === 0) {
+			centrisNotify.error("sellerDlg.Messages.NameRequired");
+			return;
 		}
-<span class="cstat-no" title="statement not covered" >		if($scope.seller.category.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >			centrisNotify.error("sellerDlg.Messages.CategoryRequired");</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+		if($scope.seller.category.length === 0) {
+			centrisNotify.error("sellerDlg.Messages.CategoryRequired");
+			return;
 		}
-<span class="cstat-no" title="statement not covered" >		if($scope.seller.imagePath.length === 0){</span>
-<span class="cstat-no" title="statement not covered" >			centrisNotify.error("sellerDlg.Messages.ImagePathRequired");</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+		if($scope.seller.imagePath.length === 0){
+			centrisNotify.error("sellerDlg.Messages.ImagePathRequired");
+			return;
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		$scope.$close($scope.seller);</span>
+		$scope.$close($scope.seller);
 	};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	$scope.onCancel = <span class="fstat-no" title="function not covered" >function onCancel() {</span></span>
-<span class="cstat-no" title="statement not covered" >		$scope.$dismiss('cancel');</span>
+	$scope.onCancel = function onCancel() {
+		$scope.$dismiss('cancel');
 	};
 });</pre></td></tr>
 </table></pre>
@@ -178,7 +172,7 @@ angular.module("project3App").controller("SellerDlgController",
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 13 2016 23:08:25 GMT+0000 (Greenwich Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Mar 15 2016 19:22:52 GMT+0000 (Greenwich Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
