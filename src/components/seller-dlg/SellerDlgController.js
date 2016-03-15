@@ -1,15 +1,13 @@
 'use strict';
 
 angular.module("project3App").controller("SellerDlgController",
-function SellerDlgController($scope, centrisNotify, modalParam) {
+function SellerDlgController($scope, centrisNotify) {
 
-	var seller = modalParam.seller;
-
-	if (seller !== undefined) {
+	if ($scope.seller !== undefined) {
 		$scope.seller = {
-			name: 		seller.name,
-			category: 	seller.category,
-			imagePath: 	seller.imagePath
+			name: 		$scope.seller.name,
+			category: 	$scope.seller.category,
+			imagePath: 	$scope.seller.imagePath
 		};
 	} 
 	else {

@@ -2,6 +2,7 @@
 
 angular.module("project3App").controller("LanguageController",
 function LanguageController($scope, $translate) {
+	
 	$scope.onChangeToIS = function onChangeToIS() {
 		$translate.use("is");
 	};
@@ -10,8 +11,4 @@ function LanguageController($scope, $translate) {
 		$translate.use("en");
 	};
 
-	//for unit tests
-	function onChangeToFallback() {
-		$translate.use("");
-	}
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-describe("LanguageController should be unit tested here\n", function() {
+describe("LanguageController should be unit tested here", function() {
 
     beforeEach(module("project3App"));
 
@@ -9,7 +9,7 @@ describe("LanguageController should be unit tested here\n", function() {
     beforeEach(inject(function ($controller, $rootScope, $translate) {
     	scope = $rootScope.$new();
         translate = $translate;
-        language = $translate.proposedLanguage() || $translate.use();
+        //language = $translate.proposedLanguage() || $translate.use();
 
     	languageController = $controller('LanguageController', {
             $scope: scope,
@@ -19,32 +19,27 @@ describe("LanguageController should be unit tested here\n", function() {
 
     //test =================================================
 
-    it("variables should be defined\n", function() {
+    it("variables should be defined", function() {
         expect(languageController).toBeDefined();
         expect(scope).toBeDefined();
         expect(translate).toBeDefined();
-        expect(language).toBeDefined();
+        //expect(language).toBeDefined();
     });
 
-    it("language should be default is\n", function() {
-        expect(language).toEqual('is');
+    it("language should be default is", function() {
+        expect(translate.proposedLanguage()).toEqual('is');
     });
-/*
-    it("language should be fallback to en\n", function() {
-        scope.onChangeToFallback();
-        expect(language).toEqual('en');
+
+    it("onChangeToEN should change the language to en", function() {
+        scope.onChangeToEN();
+        expect(translate.proposedLanguage()).toEqual("en");
     });
-*/
-    it("onChangeToIS should change the language to is\n", function() {
+
+    it("onChangeToIS should change the language to is", function() {
         scope.onChangeToIS();
-        expect(language).toEqual("is");
+        expect(translate.proposedLanguage()).toEqual("is");
     });
-/*
-    it("onChangeToEN should change the language to en\n", function() {
-        scope.onChangeToEn();
-        expect(language).toEqual("en");
-    });
-*/
+
 
 
 });

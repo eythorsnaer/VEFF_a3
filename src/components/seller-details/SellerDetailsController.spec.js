@@ -10,6 +10,21 @@ describe("SellerDetailsController should be unit tested here\n", function() {
         path: "/sellers/1"
     };
 
+    //create mock product
+    var mockProduct = {
+        id: 1,
+        product: {
+            id: 23,
+            name: "svali",
+            price: 2990,
+            quantitySold: 45,
+            quantityInStock: 900,
+            imagePath: "imgur.com/sjomli/sjomli.jpg"
+        }
+    };
+
+    // ctrl init ==========================================
+
     beforeEach(inject(function ($controller, $rootScope, $routeParams, $location, AppResource, ProductDlg, centrisNotify) {
         scope = $rootScope.$new();
         routeParams = $routeParams;
@@ -22,8 +37,6 @@ describe("SellerDetailsController should be unit tested here\n", function() {
         spyOn(appResource, 'getSellerProducts').and.callThrough();
         spyOn(appResource, 'getSellerDetails').and.callThrough();
         spyOn(productDlg, 'show').and.callThrough();
-        spyOn(notify, 'success').and.callThrough();
-        spyOn(notify, 'error').and.callThrough();
         spyOn(mockLocation, "path");
 
 
@@ -35,7 +48,6 @@ describe("SellerDetailsController should be unit tested here\n", function() {
             productDlg: ProductDlg
         });
     }));
-
 
     //test =================================================
 
@@ -60,14 +72,6 @@ describe("SellerDetailsController should be unit tested here\n", function() {
         expect(scope.onAddProduct).toBeDefined();
         expect(scope.onEditProduct).toBeDefined();
     });
-/*
-    it("vars should be defined\n", function() {
-        expect(ctrl.temp).toBeDefined();
-        expect(ctrl.product).toBeDefined();
-        expect(ctrl.value).toBeDefined();
-        expect(ctrl.a).toBeDefined();
-    });
-*/
 
     it("scope vars should be initalized", function() {
         expect(scope.isLoading).toBe(false);
@@ -82,19 +86,6 @@ describe("SellerDetailsController should be unit tested here\n", function() {
         appResource.getSellerDetails();
         expect(appResource.getSellerDetails).toHaveBeenCalled();
     });
-
-    //create mock product
-    var mockProduct = {
-        id: 1,
-        product: {
-            id: 23,
-            name: "svali",
-            price: 2990,
-            quantitySold: 45,
-            quantityInStock: 900,
-            imagePath: "imgur.com/sjomli/sjomli.jpg"
-        }
-    };
 
     //onAddProduct()
     it("onAddProduct should add the memeber to $scope.sellers\n", function(){

@@ -47,8 +47,8 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'src/app.js': 'coverage',
-      'src/**/*.js': 'coverage'
-      /*
+      //'src/**/*.js': 'coverage'
+      
       'src/components/language/*.js': 'coverage',
       'src/components/loading-message/*.js': 'coverage',
       'src/components/product-directive/*.js': 'coverage',
@@ -56,7 +56,7 @@ module.exports = function(config) {
       'src/components/seller-details/*.js': 'coverage',
       'src/components/seller-dlg/*js': 'coverage',
       'src/components/sellers/*.js': 'coverage',
-    */
+    
     },
 
 

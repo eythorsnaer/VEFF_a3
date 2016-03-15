@@ -1,17 +1,15 @@
 'use strict';
 
 angular.module("project3App").controller("ProductDlgController",
-function ProductDlgController($scope, centrisNotify, modalParam) {
+function ProductDlgController($scope, centrisNotify) {
 
-	var product = modalParam.product;
-
-	if (product !== undefined) {
+	if ($scope.product !== undefined) {
 		$scope.product = {
-			name: 			 product.name,
-			price: 			 product.price,
-			quantitySold: 	 product.quantitySold,
-			quantityInStock: product.quantityInStock, 
-			imagePath: 		 product.imagePath
+			name: 			 $scope.product.name,
+			price: 			 $scope.product.price,
+			quantitySold: 	 $scope.product.quantitySold,
+			quantityInStock: $scope.product.quantityInStock, 
+			imagePath: 		 $scope.product.imagePath
 		};
 	} 
 	else {
@@ -39,8 +37,8 @@ function ProductDlgController($scope, centrisNotify, modalParam) {
 			centrisNotify.error("productDlg.Messages.QuantitySoldRequired");
 			return;
 		}
-		if($scope.product.quantitySold.length === 0) {
-			centrisNotify.error("productDlg.Messages.QunatityInStockRequired");
+		if($scope.product.quantityInStock.length === 0) {
+			centrisNotify.error("productDlg.Messages.QuantityInStockRequired");
 			return;
 		}
 		if($scope.product.imagePath.length === 0){
@@ -58,7 +56,7 @@ function ProductDlgController($scope, centrisNotify, modalParam) {
 			return;
 		}
 		if(isNaN($scope.product.quantityInStock)) {
-			centrisNotify.error("productDlg.Messages.QunatityInStockIsNaN", "products.Fail");
+			centrisNotify.error("productDlg.Messages.QuantityInStockIsNaN", "products.Fail");
 			return;
 		}
 

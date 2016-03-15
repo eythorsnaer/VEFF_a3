@@ -39,6 +39,20 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 angular.module("sharedServices", ["toastr"]);
 "use strict";
 
+angular.module("project3App").controller("LanguageController",
+function LanguageController($scope, $translate) {
+	
+	$scope.onChangeToIS = function onChangeToIS() {
+		$translate.use("is");
+	};
+
+	$scope.onChangeToEN = function onChangeToEN() {
+		$translate.use("en");
+	};
+
+});
+"use strict";
+
 angular.module("project3App").directive("loadingMessage", 
 function loadingMessage() {
 	return {
@@ -49,112 +63,13 @@ function loadingMessage() {
 
 "use strict";
 
-angular.module("project3App").controller("LanguageController",
-function LanguageController($scope, $translate) {
-	$scope.onChangeToIS = function onChangeToIS() {
-		$translate.use("is");
-	};
-
-	$scope.onChangeToEN = function onChangeToEN() {
-		$translate.use("en");
-	};
-
-	//for unit tests
-	function onChangeToFallback() {
-		$translate.use("");
-	}
-});
-"use strict";
-
-angular.module("project3App").factory("ProductDlg",
-function ProductDlg($uibModal) {
+angular.module("project3App").directive('productCard', function productCard(){
 	return {
-		show: function(product) {
-			var modalInstance = $uibModal.open({
-				templateUrl: "components/product-dlg/product-dlg.html",
-				controller: "ProductDlgController",
-				resolve: {
-					modalParam: function () {
-					    return {
-						  	product: product
-					    };
-				 	}
-				}
-			});
-
-			return modalInstance.result;
+		restrict: "E",
+		templateUrl: "src/components/product/Product.html",
+		scope: {
+			product: "=ngModel"
 		}
-	};
-});
-'use strict';
-
-angular.module("project3App").controller("ProductDlgController",
-function ProductDlgController($scope, centrisNotify, modalParam) {
-
-	var product = modalParam.product;
-
-	if (product !== undefined) {
-		$scope.product = {
-			name: 			 product.name,
-			price: 			 product.price,
-			quantitySold: 	 product.quantitySold,
-			quantityInStock: product.quantityInStock, 
-			imagePath: 		 product.imagePath
-		};
-	} 
-	else {
-		$scope.product = {
-			name: 	 "",
-			price: 			 "",
-			quantitySold: 	 "",
-			quantityInStock: "", 
-			imagePath: 		 ""
-		};
-	}
-
-	$scope.onOk = function onOk() {
-		//product validation
-		//should not be empty
-		if($scope.product.name.length === 0) {
-			centrisNotify.error("productDlg.Messages.NameRequired");
-			return;
-		}
-		if($scope.product.price.length === 0) {
-			centrisNotify.error("productDlg.Messages.PriceRequired");
-			return;
-		}
-		if($scope.product.quantitySold.length === 0){
-			centrisNotify.error("productDlg.Messages.QuantitySoldRequired");
-			return;
-		}
-		if($scope.product.quantitySold.length === 0) {
-			centrisNotify.error("productDlg.Messages.QunatityInStockRequired");
-			return;
-		}
-		if($scope.product.imagePath.length === 0){
-			centrisNotify.error("productDlg.Messages.ImagePathRequired");
-			return;
-		}
-
-		//should be number
-		if(isNaN($scope.product.price)) {
-			centrisNotify.error("productDlg.Messages.PriceIsNaN", "products.Fail");
-			return;
-		}
-		if(isNaN($scope.product.quantitySold)){
-			centrisNotify.error("productDlg.Messages.QuantitySoldIsNaN", "products.Fail");
-			return;
-		}
-		if(isNaN($scope.product.quantityInStock)) {
-			centrisNotify.error("productDlg.Messages.QunatityInStockIsNaN", "products.Fail");
-			return;
-		}
-
-		$scope.$close($scope.product);
-	};
-
-	$scope.onCancel = function onCancel() {
-		$scope.$dismiss('cancel');
 	};
 });
 "use strict";
@@ -357,13 +272,93 @@ function AppResource() {
 });
 "use strict";
 
-angular.module("project3App").directive('productCard', function productCard(){
+angular.module("project3App").factory("ProductDlg",
+function ProductDlg($uibModal) {
 	return {
-		restrict: "E",
-		templateUrl: "src/components/product/Product.html",
-		scope: {
-			product: "=ngModel"
+		show: function(product) {
+			var modalInstance = $uibModal.open({
+				templateUrl: "components/product-dlg/product-dlg.html",
+				controller: "ProductDlgController",
+				resolve: {
+					modalParam: function () {
+					    return {
+						  	product: product
+					    };
+				 	}
+				}
+			});
+
+			return modalInstance.result;
 		}
+	};
+});
+'use strict';
+
+angular.module("project3App").controller("ProductDlgController",
+function ProductDlgController($scope, centrisNotify) {
+
+	if ($scope.product !== undefined) {
+		$scope.product = {
+			name: 			 $scope.product.name,
+			price: 			 $scope.product.price,
+			quantitySold: 	 $scope.product.quantitySold,
+			quantityInStock: $scope.product.quantityInStock, 
+			imagePath: 		 $scope.product.imagePath
+		};
+	} 
+	else {
+		$scope.product = {
+			name: 	 "",
+			price: 			 "",
+			quantitySold: 	 "",
+			quantityInStock: "", 
+			imagePath: 		 ""
+		};
+	}
+
+	$scope.onOk = function onOk() {
+		//product validation
+		//should not be empty
+		if($scope.product.name.length === 0) {
+			centrisNotify.error("productDlg.Messages.NameRequired");
+			return;
+		}
+		if($scope.product.price.length === 0) {
+			centrisNotify.error("productDlg.Messages.PriceRequired");
+			return;
+		}
+		if($scope.product.quantitySold.length === 0){
+			centrisNotify.error("productDlg.Messages.QuantitySoldRequired");
+			return;
+		}
+		if($scope.product.quantityInStock.length === 0) {
+			centrisNotify.error("productDlg.Messages.QuantityInStockRequired");
+			return;
+		}
+		if($scope.product.imagePath.length === 0){
+			centrisNotify.error("productDlg.Messages.ImagePathRequired");
+			return;
+		}
+
+		//should be number
+		if(isNaN($scope.product.price)) {
+			centrisNotify.error("productDlg.Messages.PriceIsNaN", "products.Fail");
+			return;
+		}
+		if(isNaN($scope.product.quantitySold)){
+			centrisNotify.error("productDlg.Messages.QuantitySoldIsNaN", "products.Fail");
+			return;
+		}
+		if(isNaN($scope.product.quantityInStock)) {
+			centrisNotify.error("productDlg.Messages.QuantityInStockIsNaN", "products.Fail");
+			return;
+		}
+
+		$scope.$close($scope.product);
+	};
+
+	$scope.onCancel = function onCancel() {
+		$scope.$dismiss('cancel');
 	};
 });
 "use strict";
@@ -471,73 +466,6 @@ function SellerDetailsController($scope, AppResource, centrisNotify, $routeParam
 });
 "use strict";
 
-angular.module("project3App").factory("SellerDlg",
-function SellerDlg($uibModal) {
-	return {
-		show: function(seller) {
-			var modalInstance = $uibModal.open({
-				templateUrl: "components/seller-dlg/seller-dlg.html",
-				controller: "SellerDlgController",
-				resolve: {
-					modalParam: function () {
-					    return {
-						  	seller: seller
-					    };
-				 	}
-				}
-			});
-
-			return modalInstance.result;
-		}
-	};
-});
-
-'use strict';
-
-angular.module("project3App").controller("SellerDlgController",
-function SellerDlgController($scope, centrisNotify, modalParam) {
-
-	var seller = modalParam.seller;
-
-	if (seller !== undefined) {
-		$scope.seller = {
-			name: 		seller.name,
-			category: 	seller.category,
-			imagePath: 	seller.imagePath
-		};
-	} 
-	else {
-		$scope.seller = {
-			name: 		"",
-			category: 	"",
-			imagePath: 	""
-		};
-	}
-
-	$scope.onOk = function onOk() {
-		//TODO: validation !!!!
-		if($scope.seller.name.length === 0) {
-			centrisNotify.error("sellerDlg.Messages.NameRequired");
-			return;
-		}
-		if($scope.seller.category.length === 0) {
-			centrisNotify.error("sellerDlg.Messages.CategoryRequired");
-			return;
-		}
-		if($scope.seller.imagePath.length === 0){
-			centrisNotify.error("sellerDlg.Messages.ImagePathRequired");
-			return;
-		}
-
-		$scope.$close($scope.seller);
-	};
-
-	$scope.onCancel = function onCancel() {
-		$scope.$dismiss('cancel');
-	};
-});
-"use strict";
-
 angular.module("project3App").controller("SellersController",
 function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
@@ -572,6 +500,71 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 				centrisNotify.error("sellers.Messages.UpdateFailed");
 			});
 		});
+	};
+});
+"use strict";
+
+angular.module("project3App").factory("SellerDlg",
+function SellerDlg($uibModal) {
+	return {
+		show: function(seller) {
+			var modalInstance = $uibModal.open({
+				templateUrl: "components/seller-dlg/seller-dlg.html",
+				controller: "SellerDlgController",
+				resolve: {
+					modalParam: function () {
+					    return {
+						  	seller: seller
+					    };
+				 	}
+				}
+			});
+
+			return modalInstance.result;
+		}
+	};
+});
+
+'use strict';
+
+angular.module("project3App").controller("SellerDlgController",
+function SellerDlgController($scope, centrisNotify) {
+
+	if ($scope.seller !== undefined) {
+		$scope.seller = {
+			name: 		$scope.seller.name,
+			category: 	$scope.seller.category,
+			imagePath: 	$scope.seller.imagePath
+		};
+	} 
+	else {
+		$scope.seller = {
+			name: 		"",
+			category: 	"",
+			imagePath: 	""
+		};
+	}
+
+	$scope.onOk = function onOk() {
+		//TODO: validation !!!!
+		if($scope.seller.name.length === 0) {
+			centrisNotify.error("sellerDlg.Messages.NameRequired");
+			return;
+		}
+		if($scope.seller.category.length === 0) {
+			centrisNotify.error("sellerDlg.Messages.CategoryRequired");
+			return;
+		}
+		if($scope.seller.imagePath.length === 0){
+			centrisNotify.error("sellerDlg.Messages.ImagePathRequired");
+			return;
+		}
+
+		$scope.$close($scope.seller);
+	};
+
+	$scope.onCancel = function onCancel() {
+		$scope.$dismiss('cancel');
 	};
 });
 "use strict";

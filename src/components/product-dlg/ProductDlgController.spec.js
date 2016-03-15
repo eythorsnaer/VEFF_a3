@@ -1,25 +1,53 @@
 'use strict';
 
 describe("ProductDlgController should be unit tested here\n", function() {
-/*
+
     beforeEach(module("project3App"));
 
-    var ctrl, scope, notify, modal;
+    var ctrl, scope, notify;
 
-    beforeEach(inject(function ($controller, $rootScope, centrisNotify) {
+    var nameError = "productDlg.Messages.NameRequired";
+    var priceError = "productDlg.Messages.PriceRequired";
+    var soldError = "productDlg.Messages.QuantitySoldRequired";
+    var stockError = "productDlg.Messages.QuantityInStockRequired";
+    var imageError = "productDlg.Messages.ImagePathRequired";
+
+    var priceNaNError = "productDlg.Messages.PriceIsNaN";
+    var soldNaNError = "productDlg.Messages.QuantitySoldIsNaN";
+    var stockNaNError = "productDlg.Messages.QuantityInStockIsNaN";
+    var failError = "products.Fail";
+
+    //create mock product
+    var mockProduct = {
+        id: 23,
+        name: "svali",
+        price: "2990",
+        quantitySold: "45",
+        quantityInStock: "900",
+        imagePath: "imgur.com/sjomli/sjomli.jpg"
+    };
+
+
+    var mockNotify = {
+        error: function(s1, s2){}
+    };
+
+    // ctrl init ==========================================
+
+    beforeEach(inject(function ($controller, $rootScope) {
         scope = $rootScope.$new();
-        notify = centrisNotify;
-        //modal = modalParam;
+        scope.$close = function(p) {};
+        scope.$dismiss = function() {};
 
-        //spyOn(scope, "$close").and.callThrough();
-        //spyOn(scope, "$dismiss").and.callThrough();
-        spyOn(notify, "error").and.callThrough();
+        notify = mockNotify;
 
+
+        spyOn(scope, "$close");
+        spyOn(notify, "error");
 
         ctrl = $controller('ProductDlgController', {
             $scope: scope,
-            centrisNotify: notify
-            //modalParam: modal
+            centrisNotify: notify,
         });
     }));
 
@@ -32,64 +60,98 @@ describe("ProductDlgController should be unit tested here\n", function() {
         expect(notify).toBeDefined();  
     });
 
+    //check scope vars
     it("scope vars should be defined", function() {
-        expect(scope.product).toBeDefined();
-        
+        expect(scope.onOk).toBeDefined();
+        expect(scope.onCancel).toBeDefined();  
     });
 
-    it("vars should be defined\n", function() {
-        expect(ctrl.temp).toBeDefined();
-        expect(ctrl.product).toBeDefined();
-        expect(ctrl.value).toBeDefined();
-        expect(ctrl.a).toBeDefined();
+    // onOk with valid product
+    it ("should call $close when onOk is called with valid product", function() {
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(scope.$close).toHaveBeenCalledWith(scope.product);
     });
 
-
-    it("scope vars should be initalized", function() {
-        expect(scope.isLoading).toBe(false);
-        expect(scope.products.length).toEqual(20);
-        expect(scope.topTen.length).toEqual(10);
-        expect(scope.sellerID).toEqual(1);
-        expect(scope.seller).not.toEqual(undefined);
-        expect(scope.hasProducts).toBe(true);
+    it ("should call notify.error when onOk is called with product.name is empty", function() {
+        mockProduct.name = "";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(nameError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.name = "bla";
     });
 
-    it("getSellerDetails should have been called", function() {
-        appResource.getSellerDetails();
-        expect(appResource.getSellerDetails).toHaveBeenCalled();
+    it ("should call notify.error when onOk is called with product.price is empty", function() {
+        mockProduct.price = "";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(priceError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.price = 1;
     });
 
-    //create mock product
-    var mockProduct = {
-        id: 23,
-        name: "svali",
-        price: 2990,
-        quantitySold: 45,
-        quantityInStock: 900,
-        imagePath: "imgur.com/sjomli/sjomli.jpg"
-    };
-
-    //onAddProduct()
-    it("onAddProduct should add the memeber to $scope.sellers\n", function(){
-        scope.onAddProduct(mockProduct);
-        expect(productDlg.show).toHaveBeenCalled();
-        //expect(appResource).toHaveBeenCalled();
+    it ("should call notify.error when onOk is called with product.quantitySold is empty", function() {
+        mockProduct.quantitySold = "";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(soldError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.quantitySold = 1;
     });
 
-    //getSellerProducts
-    it("getSellerProducts should have been called", function() {
-        appResource.getSellerProducts();
-        expect(appResource.getSellerProducts).toHaveBeenCalled();
+    it ("should call notify.error when onOk is called with product.quantityInStock is empty", function() {
+        mockProduct.quantityInStock = "";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(stockError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.quantityInStock = 1;
     });
 
-    //onEditProduct()
-    it("onEditSeller should update the seller in $scope.sellers\n", function(){
-        mockProduct.name = "bali";
-        scope.onAddProduct(mockProduct);
-        expect(productDlg.show).toHaveBeenCalled();
+    it ("should call notify.error when onOk is called with product.imagePath is empty", function() {
+        mockProduct.imagePath = "";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(imageError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.imagePath = "bla";
+    });
+    
+
+    it ("should call notify.error when onOk is called with product.price as string", function() {
+        mockProduct.price = "NotANumber.jpg";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(priceNaNError, failError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.price = 1;
     });
 
-*/
+    it ("should call notify.error when onOk is called with product.quantitySold as string", function() {
+        mockProduct.quantitySold = "NotANumber.jpg";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(soldNaNError, failError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.quantitySold = 1;
+    });
+
+    it ("should call notify.error when onOk is called with product.quantityInStock as string", function() {
+        mockProduct.quantityInStock = "NotANumber.jpg";
+        scope.product = mockProduct;
+        scope.onOk();
+        expect(notify.error).toHaveBeenCalledWith(stockNaNError, failError);
+        expect(scope.$close).not.toHaveBeenCalled();
+        mockProduct.quantityInStock = 1;
+    });
+
+    it ("should call $dismiss when onCancel is called", function() {
+        spyOn(scope, "$dismiss");
+        scope.onCancel();
+        expect(scope.$dismiss).toHaveBeenCalled();
+    });
+
 });
 
 

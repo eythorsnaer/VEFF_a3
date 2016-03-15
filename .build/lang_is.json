@@ -25,7 +25,7 @@
 			"NameRequired": "Vinsamlegast sláðu inn vöruheiti",
 			"PriceRequired": "Vinsamlegast sláðu inn verð",
 			"QuantitySoldRequired": "Vinsamlegast sláðu inn fjölda seldra vara",
-			"QunatityInStockRequired": "Vinsamlegast sláðu inn magn á lager",
+			"QuantityInStockRequired": "Vinsamlegast sláðu inn magn á lager",
 			"ImagePathRequired": "Vinsamlegast sláðu inn slóð á mynd",
 			"PriceIsNaN": "Nej Skat, verð á vöru verður að vera tala",
 			"QuantitySoldIsNaN": "Nej Skat, fjöldi seldra vara verður að vera tala",
