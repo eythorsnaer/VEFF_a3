@@ -1,22 +1,4 @@
 {
-	"productDlg": {
-		"Title": "Product List",
-		"Name": "Product Name",
-		"Price": "Price",
-		"QuantitySold": "Quantity Sold",
-		"QuantityInStock": "Quantity In Stock",
-		"ImagePath": "Image Path",
-		"Messages": {
-			"NameRequired": "Put the Name in the box or it gets the hose again",
-			"PriceRequired": "Put the Price in the box or it gets the hose again",
-			"QuantitySoldRequired": "Put the Quantity Sold in the box or it gets the hose again",
-			"QuantityInStockRequired": "Put the Quantity in Stock in the box or it gets the hose again",
-			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again",
-			"PriceIsNaN": "Price is not a number",
-			"QuantitySoldIsNaN": "QuantitySold is not a number",
-			"QuantityInStockIsNaN": "Quantity In Stock is not a number"
-		}
-	},
 	"product": {
 		"Title": "Product List",
 		"Name": "Product Name",
@@ -30,6 +12,25 @@
 			"SaveFailed": "Unfortunately we could not save the product",
 			"UpdateSucceeded": "The product has been updated",
 			"UpdateFailed": "Unfortunately we could not update the product"
+		}
+	},
+	"productDlg": {
+		"Title": "Product List",
+		"Name": "Product Name",
+		"Price": "Price",
+		"QuantitySold": "Quantity Sold",
+		"QuantityInStock": "Quantity In Stock",
+		"ImagePath": "Image Path",
+		"AddProduct": "Add Product",
+		"Messages": {
+			"NameRequired": "Put the Name in the box or it gets the hose again",
+			"PriceRequired": "Put the Price in the box or it gets the hose again",
+			"QuantitySoldRequired": "Put the Quantity Sold in the box or it gets the hose again",
+			"QuantityInStockRequired": "Put the Quantity in Stock in the box or it gets the hose again",
+			"ImagePathRequired": "Put the Image Path in the box or it gets the hose again",
+			"PriceIsNaN": "Price is not a number",
+			"QuantitySoldIsNaN": "QuantitySold is not a number",
+			"QuantityInStockIsNaN": "Quantity In Stock is not a number"
 		}
 	},
 	"sellerDlg": {

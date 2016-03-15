@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>22/24</span>
+        <span class='fraction'>19/19</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>22/24</span>
+        <span class='fraction'>19/19</span>
       </div>
     </div>
   </div>
@@ -87,12 +87,7 @@
 42
 43
 44
-45
-46
-47
-48
-49
-50</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+45</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -101,11 +96,11 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">5×</span>
-<span class="cline-any cline-yes">5×</span>
-<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -117,16 +112,11 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -136,14 +126,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
-describe("LanguageController should be unit tested here\n", function() {
+describe("LanguageController should be unit tested here", function() {
 &nbsp;
     beforeEach(module("project3App"));
 &nbsp;
@@ -152,7 +142,7 @@ describe("LanguageController should be unit tested here\n", function() {
     beforeEach(inject(function ($controller, $rootScope, $translate) {
     	scope = $rootScope.$new();
         translate = $translate;
-        language = $translate.proposedLanguage() || <span class="branch-1 cbranch-no" title="branch not covered" >$translate.use();</span>
+        //language = $translate.proposedLanguage() || $translate.use();
 &nbsp;
     	languageController = $controller('LanguageController', {
             $scope: scope,
@@ -162,30 +152,25 @@ describe("LanguageController should be unit tested here\n", function() {
 &nbsp;
     //test =================================================
 &nbsp;
-    it("variables should be defined\n", function() {
+    it("variables should be defined", function() {
         expect(languageController).toBeDefined();
         expect(scope).toBeDefined();
         expect(translate).toBeDefined();
-        expect(language).toBeDefined();
+        //expect(language).toBeDefined();
     });
 &nbsp;
-    it("language should be default is\n", function() {
-        expect(language).toEqual('is');
+    it("language should be default is", function() {
+        expect(translate.proposedLanguage()).toEqual('is');
     });
 &nbsp;
-     it("language should be fallback to en\n", function() {
-        scope.onChangeToFallback();
-<span class="cstat-no" title="statement not covered" >        expect(language).toEqual('en');</span>
+    it("onChangeToEN should change the language to en", function() {
+        scope.onChangeToEN();
+        expect(translate.proposedLanguage()).toEqual("en");
     });
 &nbsp;
-    it("onChangeToIS should change the language to is\n", function() {
+    it("onChangeToIS should change the language to is", function() {
         scope.onChangeToIS();
-        expect(language).toEqual("is");
-    });
-&nbsp;
-    it("onChangeToEN should change the language to en\n", function() {
-        scope.onChangeToEn();
-<span class="cstat-no" title="statement not covered" >        expect(language).toEqual("en");</span>
+        expect(translate.proposedLanguage()).toEqual("is");
     });
 &nbsp;
 &nbsp;
@@ -196,7 +181,7 @@ describe("LanguageController should be unit tested here\n", function() {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 13 2016 23:08:25 GMT+0000 (Greenwich Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Mar 15 2016 19:22:52 GMT+0000 (Greenwich Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

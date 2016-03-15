@@ -6,6 +6,7 @@
 		"QuantitySold":			     	"Fjöldi seldra vara",
 		"QuantityInStock":			 	"Magn á lager",
 		"ImagePath": 				 	"Slóð á mynd", 
+		"AddProduct":					"Bæta við vöru",
 		"Messages" : {
 			"NameRequired":				"Vinsamlegast sláðu inn vöruheiti",
 			"PriceRequired":			"Vinsamlegast sláðu inn verð",

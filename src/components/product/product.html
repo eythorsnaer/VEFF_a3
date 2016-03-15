@@ -1,13 +1,21 @@
-<div class="ProductContainer">
+<div class="productContainer">
 
-	<div class="ProductImageContainer">
+	<div class="productImage">
 		<img ng-src="{{product.imagePath}}" alt="{{'shared.AltTag' | translate}}" width="200" height="200"/>
 	</div>
-	<div> 
+	<div class="productContent"> 
+		<div class="productLeft">
 			<label translate="product.Name"></label>
 			<p>{{product.name}}</p>
 			<label translate="product.Price"></label>
 			<p>{{product.price}} kr.</p>
+		</div>
+		<div class="productRight">
+			<label translate="product.QuantitySold"></label>
+			<p>{{product.quantitySold}}</p>
+			<label translate="product.QuantityInStock"></label>
+			<p>{{product.QuantityInStock}}</p>
+		</div>
 	</div>
 	<div ng-controller="SellerDetailsController">
 		<button class="glyphicon glyphicon-edit btn btn-default" ng-click="onEditProduct(product)" >

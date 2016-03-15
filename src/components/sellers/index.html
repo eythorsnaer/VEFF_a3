@@ -5,8 +5,8 @@
 	<loading-message></loading-message>
 </div>
 
-<div class="content" ng-hide="isLoading">
-	<div>
+<div class="content sellersContainer" ng-hide="isLoading">
+	<div class"addSellerContainer">
 		<button class="btn btn-primary" ng-click="onAddSeller()">
 			<span class="glyphicon glyphicon-plus"></span>
 			<!--{{sellers.AddSeller | translate}}-->
@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="table-responsive">
-		<table class="table table-hover">
+		<table class="table table-hover sllersTable">
 			<thead>
 				<tr table-sort="name">
 					<th></th>			

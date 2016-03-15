@@ -5,48 +5,95 @@
 }
 
 body {
-	background: url('http://orig01.deviantart.net/766f/f/2013/052/d/7/seamless_texture__frozen_by_ark4n-d2pg9na.jpg');
-	background-size: 100% auto;
-	background-repeat: repeat-y;
+  background: url('http://i.imgur.com/tXnNUnF.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  word-spacing: normal;
+  font-size: 20px;
 
-	font-family: 'Open Sans', sans-serif;
-	font-style: black;
-	word-spacing: normal;
-	font-size: 20px;
 }
-
 
 .ProductContainer {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #51cecd;
-}
-.ProductContainer img {
-  border-radius: 7%;
-}
-.ProductContainer .productName {
+  background: #B3B3B3;
+  padding-top: 20px;
+  margin-top: 10px;
+  position: static;
   float: left;
-  text-align: left;
-}
-.ProductContainer .productPrice {
-  text-align: right;
-}
-.ProductContainer:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 
-#sectionContent {
-
-	
+  border-radius: 10px;
+  /*border:1px solid black;*/
 }
 
 .SellerDetailContainer {
+  margin-left: 40%;
+}
+
+.languageButtons{
+  width:20%;
+  margin: auto;
+  margin-bottom:50px;
+}
+
+.container-fluid {
+  padding-left:15%;
+  padding-right:15%;
+}
+
+.SellerDetailContainer {
+  color: #39D2A3;
+}
+
+.SellerImageContainer > img {
+  border-radius:85% 15% / 15% 85%;
+  padding: 5px;
+  border: 5px solid #D24FCC;
+  background: #39D2A3;
+}
+
+
+
+
+
+
+.Sellers {
+  /* TODO: add any Sellers-specific styles here! */
+}
+
+body {
+  background: url('http://i.imgur.com/tXnNUnF.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  word-spacing: normal;
+  font-size: 20px;
 
 }
 
-.SellerImageContainer {
-	
+.ProductContainer {
+  padding-top: 20px;
+  margin-top: 10px;
+  position: static;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border:1px solid black;
 }
 
+.SellerDetailContainer {
+  margin-left: 40%;
+}
+
+.languageButtons{
+  margin-top: 10px;
+  margin-left: 46%;
+}

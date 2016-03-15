@@ -1,54 +1,59 @@
-
 .Sellers {
   /* TODO: add any Sellers-specific styles here! */
-
 }
 
 body {
-	background: url('http://orig01.deviantart.net/766f/f/2013/052/d/7/seamless_texture__frozen_by_ark4n-d2pg9na.jpg');
-	background-size: 100% auto;
-	background-repeat: repeat-y;
+  background: url('http://i.imgur.com/78P61vL.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  word-spacing: normal;
+  font-size: 20px;
+  padding: 0% 10%;
 
-	font-family: 'Open Sans', sans-serif;
-	font-style: black;
-	word-spacing: normal;
-	font-size: 20px;
 }
 
-
-.ProductContainer {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #51cecd;
-}
-.ProductContainer img {
-  border-radius: 7%;
-}
-.ProductContainer .productName {
+.productContainer {
+  position: static;
   float: left;
-  text-align: left;
-}
-.ProductContainer .productPrice {
-  text-align: right;
-}
-.ProductContainer:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  margin: 5px ;
+  padding:10px;
+  background: #B5CFBC;
+  border-radius: 10px;
 }
 
-
-
-#sectionContent {
-
-	
-}
-
-.SellerDetailContainer {
+.sellerDetailContainer {
+  
+  padding-left: 35%;
 
 }
 
-.SellerImageContainer {
-	border-radius:80% 20% / 20% 80%;
+.sellerImage>img {
+  border-radius:85% 15% / 15% 85%;
+  padding: 5px;
+  border: 5px solid #D24FCC;
+  background: #39D2A3;
+}
 }
 
+.mainContent {
+  padding: 15%;    
+}
+
+.languageButtons{
+  
+  margin: 30px 40%;
+
+}
+
+.backContainer {
+  clear: both;
+  font-size: 30px;
+
+}
+
+.addProductContainer {
+  
+  margin: 3% 0%;
+}

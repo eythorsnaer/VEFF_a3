@@ -5,7 +5,8 @@
 		"Price":					 	"Price",
 		"QuantitySold":			     	"Quantity Sold",
 		"QuantityInStock":			 	"Quantity In Stock",
-		"ImagePath": 				 	 "Image Path", 
+		"ImagePath": 				 	 "Image Path",
+		"AddProduct":					"Add Product",
 		"Messages" : {	
 			"NameRequired":				"Put the Name in the box or it gets the hose again",
 			"PriceRequired":			"Put the Price in the box or it gets the hose again",

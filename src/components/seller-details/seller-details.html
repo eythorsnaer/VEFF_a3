@@ -3,26 +3,31 @@
 </div>
 
 <div ng-hide="isLoading">
-	<div >
-		<button class="btn btn-primary" ng-click="onAddProduct()">
-			<span class="glyphicon glyphicon-plus"/>
-			<span translate="shared.Add"></span>
-		</button>
+	<div class="backContainer">
+		<a href="#/">
+			<span class="glyphicon glyphicon-menu-left"></span>
+			<span translate="shared.Back"></span>
+
+		</a>
 	</div>
 
-	<div>
-		<a href="#/"><span translate="shared.Back"></span></a>
-	</div>
-	<div class="SellerDetailContainer">
-		<div class="SellerImageContainer">
-			<img src="{{seller.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="200" width="200">
+	<div class="sellerDetailContainer">
+		<div class="sellerImage">
+			<img src="{{seller.imagePath}}" alt="{{'shared.AltTag' | translate}}" height="400" width="400">
 		</div>
 		
 		<h2>{{seller.name}}</h2>
 		<p>{{seller.category}}</p>
 	</div>
 
-	<div ng-show="allTab">
+	<div class="addProductContainer">
+		<button class="btn btn-primary" ng-click="onAddProduct()">
+			<span class="glyphicon glyphicon-plus"/>
+			<span translate="productDlg.AddProduct"></span>
+		</button>
+	</div>
+
+	<div class="allProducts" ng-show="allTab">
 		<ul class="nav nav-tabs">
 		  <li class="active"><a translate="shared.allProducts"></a></li>
 		  <li ng-click="allTab = false" ng-init="allTab=true"><a translate="shared.topTen"></a></li>
@@ -34,7 +39,7 @@
 		<div ng-hide="hasProducts" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
 	</div>
 
-	<div ng-hide="allTab">
+	<div class="topTen" ng-hide="allTab">
 		<ul class="nav nav-tabs">
 		  <li ng-click="allTab = true"><a translate="shared.allProducts"></a></li>
 		  <li class="active"><a translate="shared.topTen"></a></li>
@@ -45,5 +50,12 @@
 
 		<div ng-hide="hasProducts" class="alert alert-info" role="alert" translate="shared.noProducts"></div>
 	</div>
+	
+	<div class="backContainer">
+		<a href="#/">
+			<span class="glyphicon glyphicon-menu-left"></span>
+			<span translate="shared.Back"></span>
 
+		</a>
+	</div>
 </div>
